@@ -1,7 +1,7 @@
 vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
     /*this is content which you can config */
     var Q1="Select the purpose of your travel.",
-        Q2="Question 2",
+        Q2="Select your current time citizenship.",
         Q3="Question 3",
         Q4="Question 4",
         Q5="Question 5",
@@ -11,9 +11,9 @@ vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
         /**this is choice */
         C1="Temporary Stay",
         C2="Time Immigration",
-        C3="Choice 3 of Choice",
-        C4="Choice 4 of Choice",
-        C5="Choice 4 of Choice",
+        C3="Information Age(1970-2030)",
+        C4="Experience Age(2031-2070)",
+        C5="Exoplanets Age(2131-2200)",
         C6="Choice 6",
         C7="Choice 7",
         C8="Choice 8",
