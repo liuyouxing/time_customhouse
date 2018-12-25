@@ -11,7 +11,7 @@
 
 ### 第一步，点击进入indexCtrl.js进行修改
 
-![Alt text](img_00.png "修改说明")
+![Alt text](img_00.jpg "修改说明")
 
 ### 第二步，代码修改说明
 
