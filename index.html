@@ -20,8 +20,26 @@
       background-color: #000;
     }    
     @font-face {
-     font-family: SuisseIntl-Light; /*这里是说明调用来的字体名字*/
+     font-family: "SuisseIntl-Light"; /*这里是说明调用来的字体名字*/
      src: url('SuisseIntl-Light_0.otf'); /*这里是字体文件路径*/
+    }
+    .display-4 {
+    font-size: 4.5rem;
+    }
+    @media (min-width: 1200px){
+    .container {
+     max-width: 1540px;
+    }
+    }
+    @media (min-width: 992px){
+    .col-lg {    
+    margin-left: 1rem;
+    }
+    }
+    @media (min-width: 992px){
+    .col-lg-4 {
+      margin-left: 1rem;
+    }
     }
     </style>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -31,20 +49,28 @@
     <title>时间海关</title>
 </head>
 <body v-app="ibsapp">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container" v-controller="indexCtrl">          
-      <h1 class="display-4" v-bind="dataJson.Content"></h1>
-      <br/>
-      <div class="row">
-        <div class="col-lg"  v-repeat="item in dataJson.Choices" >
-            <span class="display-4" style="border: white solid 1px" v-click="doIt(item)" v-bind="item.Choice"></span>
+  <div class="jumbotron jumbotron-fluid" style='font-family: "SuisseIntl-Light";'>
+    <div class="container" v-controller="indexCtrl">   
+      <div style="margin-top: 8rem" v-show="dataJson.Content" >   
+        <h1 class="display-4" v-bind="dataJson.Content"></h1>
+        <br/>
+        <br/>
+        <br/>
+        <div class="row">
+          <div v-class="dataJson.Choices.length==1?'col-lg-4':'col-lg'"  v-repeat="item in dataJson.Choices" style="border: white solid 1px;cursor:pointer;" v-click="doIt(item)"  >
+              <span class="display-4"  v-bind="item.Choice"></span>
+          </div>
         </div>
       </div>
-      
-      <h1 class="display-4" v-bind="dataJson.Result"></h1>
-      <p v-show="dataJson.Result" class="lead">explain</p>
-      <span  v-show="dataJson.Result" class="display-4" style="border: white solid 1px" v-click="exit();">Exit</span>
 
+      <div style="margin-top: 6rem" v-show="dataJson.Result" >
+          <h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.Result"></h1>
+          <br/>
+          <br/>
+          <p class="lead" v-bind="dataJson.Explain" style="font-size: 3rem;"></p>
+          <br/>
+          <span  v-show="dataJson.Result" class="display-4" style="border: white solid 1px;cursor:pointer;font-size: 3.5rem;" v-click="exit();">Exit</span>
+      </div>
     </div>
   </div>
   <script src="vx2.min.js"></script>
