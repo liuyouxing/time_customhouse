@@ -9,9 +9,13 @@ https://liuyouxing.github.io/time_customhouse/
 
 ## 配置管理
 
-登录github，打开文件indexCtrl.js，并按图修改。
+先登录github，然后打开文件indexCtrl.js，并按逻辑图进行配置修改。
 
-![Alt text](img.jpg "按图修改")
+### 点击进入indexCtrl.js进行修改
+
+![Alt text](img_00.jpg "修改说明")
+
+### 代码修改说明
 
 ```js
 /*this is content which you can config */
@@ -123,3 +127,7 @@ https://liuyouxing.github.io/time_customhouse/
         R36E="Result 36 explain";
     /* computer code */
 ```
+
+###代码修改逻辑
+
+![Alt text](img.jpg "按图修改")
