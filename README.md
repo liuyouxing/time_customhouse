@@ -16,7 +16,7 @@
 ### 第二步，代码修改说明
 
 ```js
-/*this is content which you can config */
+    /*this is content which you can config */
     var Q1="Question 1",
         Q2="Question 2",
         Q3="Question 3",
