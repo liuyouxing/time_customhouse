@@ -2,8 +2,8 @@ vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
     /*this is content which you can config */
     var Q1="Select the purpose of your travel.",
         Q2="Select your current time citizenship.",
-        Q3="Select your Time Wanderer passport",
-        Q4="Select the purpose of your trip to 2089",
+        Q3="Select your Time Wanderer passport.",
+        Q4="Select the purpose of your trip to 2089.",
         Q5="Question 5",
         Q6="Question 6",
         Q7="Question 7",
