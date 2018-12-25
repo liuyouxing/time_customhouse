@@ -26,6 +26,10 @@
     .display-4 {
     font-size: 4.5rem;
     }
+    .myclass {
+      border: white solid 1px;
+      cursor:pointer;
+    }
     @media (min-width: 1200px){
     .container {
      max-width: 1540px;
@@ -57,7 +61,7 @@
         <br/>
         <br/>
         <div class="row">
-          <div v-class="dataJson.Choices.length==1?'col-lg-4':'col-lg'"  v-repeat="item in dataJson.Choices" style="border: white solid 1px;cursor:pointer;" v-click="doIt(item)"  >
+          <div v-class="dataJson.Choices.length==1?'col-lg-4 myclass':'col-lg myclass'"  v-repeat="item in dataJson.Choices" v-click="doIt(item)"  >
               <span class="display-4" style="font-size: 3.5rem;" v-bind="item.Choice"></span>
           </div>
         </div>
