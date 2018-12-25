@@ -56,7 +56,7 @@
         <br/>
         <br/>
         <br/>
-        <div class="row">
+        <div class="row" v-show="dataJson.Choices">
           <div v-class="dataJson.Choices.length==1?'col-lg-4':'col-lg'"  v-repeat="item in dataJson.Choices" style="border: white solid 1px;cursor:pointer;" v-click="doIt(item)"  >
               <span class="display-4" style="font-size: 3.5rem;" v-bind="item.Choice"></span>
           </div>
@@ -69,8 +69,7 @@
           <br/>
           <p class="lead" v-bind="dataJson.Explain" style="font-size: 3rem;"></p>
           <br/>
-          <span 
-           class="display-4" style="border: white solid 1px;cursor:pointer;font-size: 3.5rem;" v-click="exit();" v-bind="'Exit'"></span>
+          <span v-show="'Exit'" class="display-4" style="border: white solid 1px;cursor:pointer;font-size: 3.5rem;display: none;" v-click="exit();" v-bind="'Exit'"></span>
       </div>
     </div>
   </div>
