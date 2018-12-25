@@ -13,7 +13,7 @@ https://liuyouxing.github.io/time_customhouse/
 
 ### 点击进入indexCtrl.js进行修改
 
-![Alt text](img_00.jpg "修改说明")
+![Alt text](img_00.png "修改说明")
 
 ### 代码修改说明
 
@@ -128,6 +128,6 @@ https://liuyouxing.github.io/time_customhouse/
     /* computer code */
 ```
 
-###代码修改逻辑
+### 代码修改逻辑
 
 ![Alt text](img.jpg "按图修改")
