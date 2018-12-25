@@ -1,10 +1,10 @@
-＃时间海关
+##时间海关
 
 ##全球访问路径
 
 ``js
 https://liuyouxing.github.io/time_customhouse/
-``js
+``
 
 ##配置管理
 indexCtrl.js
@@ -117,4 +117,4 @@ indexCtrl.js
         R35E="Result 35 explain",
         R36E="Result 36 explain";
     /* computer code */
-``js
+``
