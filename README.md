@@ -9,7 +9,7 @@ https://liuyouxing.github.io/time_customhouse/
 
 ## 配置管理
 
-打开文件indexCtrl.js，并按图修改。
+登录github，打开文件indexCtrl.js，并按图修改。
 
 ![Alt text](img.jpg "按图修改")
 
