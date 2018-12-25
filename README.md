@@ -14,7 +14,7 @@ https://liuyouxing.github.io/time_customhouse/
 ![Alt text](img.jpg "按图修改")
 
 ```js
-/*this is content which you can config */
+    /*this is content which you can config */
     var Q1="Question 1",
         Q2="Question 2",
         Q3="Question 3",
