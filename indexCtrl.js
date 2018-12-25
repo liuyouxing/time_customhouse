@@ -1,6 +1,6 @@
 vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
     /*this is content which you can config */
-    var Q1="Question 1",
+    var Q1="Select the purpose of your travel.",
         Q2="Question 2",
         Q3="Question 3",
         Q4="Question 4",
@@ -9,8 +9,8 @@ vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
         Q7="Question 7",
         Q8="Question 8",
         /**this is choice */
-        C1="Choice 1",
-        C2="Choice 2",
+        C1="Temporary Stay",
+        C2="Time Immigration",
         C3="Choice 3 of Choice",
         C4="Choice 4 of Choice",
         C5="Choice 4 of Choice",
