@@ -37,11 +37,11 @@
       <br/>
       <div class="row">
         <div class="col-lg"  v-repeat="item in dataJson.Choices" >
-            <span class="display-4" style="border: white solid 1px" v-click="doIt(item)">{{item.Choice}}</span>
+            <span class="display-4" style="border: white solid 1px" v-click="doIt(item)" v-bind="item.Choice"></span>
         </div>
       </div>
       
-      <h1 class="display-4" >{{dataJson.Result}}</h1>
+      <h1 class="display-4" v-bind="dataJson.Result"></h1>
       <p v-show="dataJson.Result" class="lead">explain</p>
       <span  v-show="dataJson.Result" class="display-4" style="border: white solid 1px" v-click="exit();">Exit</span>
 
