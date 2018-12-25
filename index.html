@@ -58,7 +58,7 @@
         <br/>
         <div class="row">
           <div v-class="dataJson.Choices.length==1?'col-lg-4':'col-lg'"  v-repeat="item in dataJson.Choices" style="border: white solid 1px;cursor:pointer;" v-click="doIt(item)"  >
-              <span class="display-4"  v-bind="item.Choice"></span>
+              <span class="display-4" style="font-size: 3.5rem;" v-bind="item.Choice"></span>
           </div>
         </div>
       </div>
