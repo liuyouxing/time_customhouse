@@ -3,19 +3,17 @@
 
 ## 全球访问路径
 
-```js
-https://liuyouxing.github.io/time_customhouse/
-```
+访问链接 [https://liuyouxing.github.io/time_customhouse/](https://liuyouxing.github.io/time_customhouse/ "点击访问"). 
 
 ## 配置管理
 
-先登录github，然后打开文件indexCtrl.js，并按逻辑图进行配置修改。
+配置说明：先登录github，然后打开文件indexCtrl.js，并按逻辑图进行配置修改。
 
-### 点击进入indexCtrl.js进行修改
+### 第一步，点击进入indexCtrl.js进行修改
 
 ![Alt text](img_00.png "修改说明")
 
-### 代码修改说明
+### 第二步，代码修改说明
 
 ```js
 /*this is content which you can config */
@@ -128,6 +126,6 @@ https://liuyouxing.github.io/time_customhouse/
     /* computer code */
 ```
 
-### 代码修改逻辑
+### 第三步，代码修改逻辑
 
 ![Alt text](img.jpg "按图修改")
