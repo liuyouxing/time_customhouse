@@ -9,11 +9,33 @@
     <meta name="author" content="CSII">
     <meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" id="favicon">
-    <script src="com.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+    .jumbotron{
+      background-color: #000;
+    }    
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+   
     <title>时间海关</title>
 </head>
-<body >
-  <div>和扣扣、</div>
-  <button onclick="doIt()">111</button>
+<body v-app="ibsapp">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container" v-controller="indexCtrl">          
+      <p class="lead" v-bind="dataJson.Content"></p>
+      <h1 class="display-4" v-repeat="item in dataJson.Choices" v-click="doIt(item)">{{item.Choice}}</h1>
+
+      <h2>{{dataJson.Result}}</h2>
+    </div>
+  </div>
+  <script src="vx2.min.js"></script>
+  <script src="indexCtrl.js"></script>
 </body>
 </html>

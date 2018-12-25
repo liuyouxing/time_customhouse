@@ -1,3 +1,0 @@
-function doIt(){
-    alert("hello");
-}
