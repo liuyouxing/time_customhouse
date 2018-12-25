@@ -166,8 +166,9 @@ vx.module('ibsapp',[]).controller("indexCtrl",['$scope',function($scope){
             }
         }
         
+    };
+    $scope.exit=function(){
+        location.reload();
     }
-    // function doIt(){
-    //     alert(JSON.stringify(Guide));
-    // }
+
 }]);

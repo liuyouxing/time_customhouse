@@ -19,6 +19,10 @@
     .jumbotron{
       background-color: #000;
     }    
+    @font-face {
+     font-family: SuisseIntl-Light; /*这里是说明调用来的字体名字*/
+     src: url('SuisseIntl-Light_0.otf'); /*这里是字体文件路径*/
+    }
     </style>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -29,10 +33,18 @@
 <body v-app="ibsapp">
   <div class="jumbotron jumbotron-fluid">
     <div class="container" v-controller="indexCtrl">          
-      <p class="lead" v-bind="dataJson.Content"></p>
-      <h1 class="display-4" v-repeat="item in dataJson.Choices" v-click="doIt(item)">{{item.Choice}}</h1>
+      <h1 class="display-4" v-bind="dataJson.Content"></h1>
+      <br/>
+      <div class="row">
+        <div class="col-lg"  v-repeat="item in dataJson.Choices" >
+            <span class="display-4" style="border: white solid 1px" v-click="doIt(item)">{{item.Choice}}</span>
+        </div>
+      </div>
+      
+      <h1 class="display-4" >{{dataJson.Result}}</h1>
+      <p v-show="dataJson.Result" class="lead">explain</p>
+      <span  v-show="dataJson.Result" class="display-4" style="border: white solid 1px" v-click="exit();">Exit</span>
 
-      <h2>{{dataJson.Result}}</h2>
     </div>
   </div>
   <script src="vx2.min.js"></script>
