@@ -1,0 +1,63 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" v-controller="AbnTestController">
+
+	<div class="col">
+		<div class="wrapper-md">
+			<div class="b-a bg-light dk r r-2x">
+				<span v-if="doing_async">...loading...</span>
+				<abn-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="2" initial-selection="Granny Smith" icon-leaf="fa fa-file-o" icon-expand="fa fa-plus" icon-collapse="fa fa-minus">
+				</abn-tree>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="wrapper-md">
+			<div class="b-a bg-light dk r r-2x" style="padding: 10px;">
+				<h5>操作节点:</h5>
+				<div class="m-t-sm m-b-sm">
+					<button v-click="try_adding_a_branch()" class="btn btn-success btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>增加节点</button>
+					<button v-click="try_deleting_a_branch()" class="btn btn-warning btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>删除节点</button>
+					<button v-click="create_a_json()" class="btn btn-danger btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>保存修改</button>
+					<button v-click="delete_json()" class="btn btn-info btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>还原数据</button>
+					<button v-click="copy_json()" class="btn btn-dark btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>复制数据</button>
+					<!--<button v-click="my_tree.expand_branch()" class="btn btn-default btn-sm">展开</button>-->
+					<!--<button v-click="my_tree.collapse_branch()" class="btn btn-default btn-sm">收缩</button>-->
+					<button v-click="my_tree.expand_all()" class="btn btn-default btn-sm">展开所有</button>
+					<button v-click="my_tree.collapse_all()" class="btn btn-default btn-sm">收缩所有</button>
+				</div>
+				<div class="line b-b line-lg"></div>
+				<div class="form-group row">
+					<label for="Textarea0" class="col-sm-2 col-form-label">编辑节点:</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="Textarea1" rows="1" v-model='output.label'></textarea>
+					</div>
+				</div>
+				<div class="line b-b line-lg"></div>
+				<div v-repeat="row in output.data">
+				<h5>通关结果{{$index+1}}:</h5>
+				<div class="form-group row">
+					<label for="Textarea1" class="col-sm-2 col-form-label">必选条件：</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="Textarea1" rows="1" v-model='row.require'></textarea>
+
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="Textarea2" class="col-sm-2 col-form-label">通关结果：</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="Textarea2" rows="1" v-model='row.Result'></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="Textarea3" class="col-sm-2 col-form-label">结果描述：</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="Textarea3" rows="2" v-model='row.Explain'></textarea>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
