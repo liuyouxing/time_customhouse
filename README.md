@@ -1,6 +1,8 @@
 
 ## 时间海关
 
+2018.12.18【新增】图形化配置界面
+
 ## 全球访问路径
 
 访问链接 [https://liuyouxing.github.io/time_customhouse/index.html](https://liuyouxing.github.io/time_customhouse/index.html "点击访问"). 
