@@ -9,6 +9,12 @@ vx.module('ibsapp').controller('AbnTestController', function($scope, $timeout) {
 	$scope.my_tree = tree = {};
 	//添加节点
 	$scope.try_adding_a_branch = function() {
+		
+		if($scope.output.level%2==0&&$scope.output.children&&$scope.output.children.length>0){
+			alert("该节点无法添加问题，请重新选择！");
+			return;
+		}
+		
 		var b;
 		b = tree.get_selected_branch();
 		return tree.add_branch(b, {
