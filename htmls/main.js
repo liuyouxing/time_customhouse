@@ -1,4 +1,3 @@
-
 vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider
@@ -20,7 +19,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		$scope.$root.dataJson = Guide[0];
 		$scope.doIt = function(item) {
 			Answers.push(item.label);
-			if(item.children&&item.children.length==1) {
+			if(item.children && item.children.length == 1) {
 				$scope.dataJson = item.children[0];
 			} else {
 				for(var i = 0; i < item.data.length; i++) {
@@ -38,6 +37,6 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		};
 		$scope.exit = function() {
 			location.reload();
-		}
+		};
 
 	}]);

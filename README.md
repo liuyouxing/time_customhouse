@@ -3,7 +3,7 @@
 
 ## 全球访问路径
 
-访问链接 [https://liuyouxing.github.io/time_customhouse/](https://liuyouxing.github.io/time_customhouse/ "点击访问"). 
+访问链接 [https://liuyouxing.github.io/time_customhouse/index.html](https://liuyouxing.github.io/time_customhouse/index.html "点击访问"). 
 
 配置链接 [https://liuyouxing.github.io/time_customhouse/index.html#set](https://liuyouxing.github.io/time_customhouse/index.html#set "点击访问"). 
 
