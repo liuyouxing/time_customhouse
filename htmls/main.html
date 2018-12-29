@@ -1,28 +1,33 @@
 <div class="jumbotron jumbotron-fluid">
 
-<div class="container" v-controller="indexCtrl">
-	<div style="margin-top: 8rem;margin-left: 2rem;margin-right: 2rem;" v-show="!dataJson.leaf">
-		<h1 class="display-4" v-bind="dataJson.label"></h1>
-		<br />
-		<br />
-		<br />
-		<br />
-		<div class="row">
-			<div v-class="dataJson.children.length==1?'col-lg-6 myclass':'col-lg myclass'" v-repeat="item in dataJson.children" v-click="doIt(item)">
-				<span class="display-4" style="font-size: 3.5rem;" v-bind="item.label"></span>
+	<div class="container" v-controller="indexCtrl">
+		<div style="margin-top: 8rem;margin-left: 2rem;margin-right: 2rem;" v-show="!dataJson.leaf">
+			<h1 class="display-4" v-bind="dataJson.label"></h1>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="row">
+				<div v-class="dataJson.children.length==1?'col-lg-6 myclass':'col-lg myclass'" v-repeat="item in dataJson.children" v-click="doIt(item)">
+					<span class="display-4" style="font-size: 3.5rem;" v-bind="item.label"></span>
+				</div>
 			</div>
 		</div>
+
+		<div style="margin-top: 6rem;margin-left: 2rem;margin-right: 2rem;" v-show="dataJson.leaf">
+			<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
+			<br />
+			<br />
+			<p class="lead" v-bind="dataJson.data" style="font-size: 3.2rem;"></p>
+			<br />
+			<br />
+			<div class="row">
+				<div class="col-lg-2 myclass"  v-click="exit();">
+					<span class="display-4" style="font-size: 3.5rem;" v-bind="'Exit'"></span>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
-	<div style="margin-top: 6rem;margin-left: 2rem;margin-right: 2rem;" v-show="dataJson.leaf">
-		<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
-		<br />
-		<br />
-		<p class="lead" v-bind="dataJson.data" style="font-size: 3.2rem;"></p>
-		<br />
-		<span class="display-4" style="border: white solid 1px;cursor:pointer;font-size: 3.5rem;" v-click="exit();" v-bind="'Exit'"></span>
-	</div>
-
-</div>
-	
 </div>
