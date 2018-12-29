@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,9 +11,9 @@
 		<meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" id="favicon">
 
-		<link rel="stylesheet" href="css/bootstrap4.css">		
-		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
-		<link rel="stylesheet" type="text/css" href="js/abn_tree.css"/>
+		<link rel="stylesheet" href="css/bootstrap4.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="js/abn_tree.css" />
 		<style>
 			body {
 				background-color: black;
@@ -38,9 +39,31 @@
 				border: white solid 1px;
 				cursor: pointer;
 			}
+			
 			ul.nav.abn-tree .level-10 .indented {
-    			position: relative;
-    			left: 180px;
+				position: relative;
+				left: 180px;
+			}
+			ul.nav.abn-tree .level-11 .indented {
+				position: relative;
+				left: 198px;
+			}
+			
+			ul.nav.abn-tree .level-12 .indented {
+				position: relative;
+				left: 216px;
+			}
+			ul.nav.abn-tree .level-13 .indented {
+				position: relative;
+				left: 234px;
+			}
+			ul.nav.abn-tree .level-14 .indented {
+				position: relative;
+				left: 252px;
+			}
+			ul.nav.abn-tree .level-15 .indented {
+				position: relative;
+				left: 270px;
 			}
 			
 			@media (min-width: 1200px) {
@@ -60,7 +83,6 @@
 					margin-left: 1rem;
 				}
 			}
-
 		</style>
 
 		<title>时间海关</title>
@@ -71,202 +93,944 @@
 		<div class="jumbotron jumbotron-fluid" style='font-family: "SuisseIntl-Light";'>
 			<div ui-view></div>
 		</div>
-		<script src="js/vx2.min.js" type="text/javascript" ></script>
-		<script src="js/vx2-ui.router.min.js" type="text/javascript" ></script>
-		<script src="js/abn_tree_directive.js" type="text/javascript" ></script>
-		<script src="htmls/main.js" type="text/javascript" ></script>
-		<script src="htmls/setting.js" type="text/javascript" ></script>
+		<script src="js/vx2.min.js" type="text/javascript"></script>
+		<script src="js/vx2-ui.router.min.js" type="text/javascript"></script>
+		<script src="js/abn_tree_directive.js" type="text/javascript"></script>
+		<script src="htmls/main.js" type="text/javascript"></script>
+		<script src="htmls/setting.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			/*this is content which you can config */
-    var Q1="Select the purpose of your travel.",
-        Q2="Select your current time citizenship.",
-        Q3="Select your Time Wanderer passport.",
-        Q4="Select the purpose of your trip to 2089.",
-        Q5="Question 5",
-        Q6="Question 6",
-        Q7="Select your current time citizenship.",
-        Q8="Question 8",
-        /**this is choice */
-        C1="Temporary Stay",
-        C2="Time Immigration",
-        C3="Information Age (1970-2030)",
-        C4="Experience Age (2031-2070)",
-        C5="Exoplanets Age (2131-2200)",
-        C6="Regular",
-        C7="Diplomatic",
-        C8="Time Police",
-        C9="Tourism",
-        C10="Business",
-        C11="Study",
-        C12="Choice 12",
-        C13="Choice 13",
-        C14="Choice 14",
-        C15="Choice 15",
-        C16="Choice 16",
-        C17="Choice 17",
-        C18="Information Age (1970-2030)",
-        C19="Experience Age (2031-2070)",
-        C20="Exoplanets Age (2131-2200)",
-        C21="Choice 21",
-        C22="Choice 22",
-        C23="Choice 23",
-        /*this is result,R1 is Result1 & R1E is explain of R1 */
-        R1="Additional information required.",
-        R2="Result 2",
-        R3="Result 3",
-        R4="Result 4",
-        R5="Result 5",
-        R6="Result 6",
-        R7="Result 7",
-        R8="Result 8",
-        R9="Result 9",
-        R10="Result 10",
-        R11="Result 11",
-        R12="Result 12",
-        R13="Result 13",
-        R14="Result 14",
-        R15="Result 15",
-        R16="Result 16",
-        R17="Result 17",
-        R18="Result 18",
-        R19="Result 19",
-        R20="Result 20",
-        R21="Result 21",
-        R22="Result 22",
-        R23="Result 23",
-        R24="Result 24",
-        R25="Result 25",
-        R26="Result 26",
-        R27="Result 27",
-        R28="Result 28",
-        R29="Result 29",
-        R30="Result 30",
-        R31="Result 31",
-        R32="Result 32",
-        R33="Result 33",
-        R34="Result 34",
-        R35="Result 35",
-        R36="Result 36"
-        /*this is explain of result */
-        R1E="Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention.",
-        R2E="Result 2 explain",
-        R3E="Result 3 explain",
-        R4E="Result 4 explain",
-        R5E="Result 5 explain",
-        R6E="Result 6 explain",
-        R7E="Result 7 explain",
-        R8E="Result 8 explain",
-        R9E="Result 9 explain",
-        R10E="Result 10 explain",
-        R11E="Result 11 explain",
-        R12E="Result 12 explain",
-        R13E="Result 13 explain",
-        R14E="Result 14 explain",
-        R15E="Result 15 explain",
-        R16E="Result 16 explain",
-        R17E="Result 17 explain",
-        R18E="Result 18 explain",
-        R19E="Result 19 explain",
-        R20E="Result 20 explain",
-        R21E="Result 21 explain",
-        R22E="Result 22 explain",
-        R23E="Result 23 explain",
-        R24E="Result 24 explain",
-        R25E="Result 25 explain",
-        R26E="Result 26 explain",
-        R27E="Result 27 explain",
-        R28E="Result 28 explain",
-        R29E="Result 29 explain",
-        R30E="Result 30 explain",
-        R31E="Result 31 explain",
-        R32E="Result 32 explain",
-        R33E="Result 33 explain",
-        R34E="Result 34 explain",
-        R35E="Result 35 explain",
-        R36E="Result 36 explain";
-    /* computer code */
-    var Question8=[{
-        'label':Q8,
-        'children':[{"label":C21,"data":[
-                    {'require':C18,'Result':R28,'Explain':R28E},
-                    {'require':C19,'Result':R31,'Explain':R31E},
-                    {'require':C20,'Result':R34,'Explain':R34E}]},
-        {"label":C22,"data":[
-                    {'require':C18,'Result':R29,'Explain':R29E},
-                    {'require':C19,'Result':R32,'Explain':R32E},
-                    {'require':C20,'Result':R35,'Explain':R35E}]},
-        {"label":C23,"data":[
-                    {'require':C18,'Result':R30,'Explain':R30E},
-                    {'require':C19,'Result':R33,'Explain':R33E},
-                    {'require':C20,'Result':R36,'Explain':R36E}]}]
-    }],Question7=[{
-        'label':Q7,
-        'children':[{"label":C18,"children":Question8},
-        {"label":C19,"children":Question8},
-        {"label":C20,"children":Question8}]
-    }],Question6=[{
-        'label':Q6,
-        'children':[{"label":C15,"data":[
-                    {'require':C3,'Result':R19,'Explain':R19E},
-                    {'require':C4,'Result':R22,'Explain':R22E},
-                    {'require':C5,'Result':R25,'Explain':R25E}]},
-                {"label":C16,"data":[
-                    {'require':C3,'Result':R20,'Explain':R20E},
-                    {'require':C4,'Result':R23,'Explain':R23E},
-                    {'require':C5,'Result':R26,'Explain':R26E}]},
-                {"label":C17,"data":[
-                    {'require':C3,'Result':R21,'Explain':R21E},
-                    {'require':C4,'Result':R23,'Explain':R23E},
-                    {'require':C5,'Result':R24,'Explain':R24E}]}]
-        }],Question5=[{
-        'label':Q5,
-        'children':[{"label":C12,"data":[
-                    {'require':C3,'Result':R10,'Explain':R10E},
-                    {'require':C4,'Result':R13,'Explain':R13E},
-                    {'require':C5,'Result':R16,'Explain':R16E}]},
-                {"label":C13,"data":[
-                    {'require':C3,'Result':R11,'Explain':R11E},
-                    {'require':C4,'Result':R14,'Explain':R14E},
-                    {'require':C5,'Result':R17,'Explain':R17E}]},
-                {"label":C14,"data":[
-                    {'require':C3,'Result':R12,'Explain':R12E},
-                    {'require':C4,'Result':R15,'Explain':R15E},
-                    {'require':C5,'Result':R18,'Explain':R18E}]}]
-    }],Question4=[{
-        'label':Q4,
-        'children':[{"label":C9,"data":[
-                    {'require':C3,'Result':R1,'Explain':R1E},
-                    {'require':C4,'Result':R4,'Explain':R4E},
-                    {'require':C5,'Result':R7,'Explain':R7E}]},
-        {"label":C10,"data":[
-                    {'require':C3,'Result':R2,'Explain':R2E},
-                    {'require':C4,'Result':R5,'Explain':R5E},
-                    {'require':C5,'Result':R8,'Explain':R8E}]},
-        {"label":C11,"data":[
-                    {'require':C3,'Result':R3,'Explain':R3E},
-                    {'require':C4,'Result':R6,'Explain':R6E},
-                    {'require':C5,'Result':R9,'Explain':R9E}]}]
-    }],Question3=[{
-        'label':Q3,
-        'children':[{"label":C6,"children":Question4},
-        {"label":C7,"children":Question5},
-        {"label":C8,"children":Question6}]
-    }],Question2=[{
-        'label':Q2,
-        'children':[{"label":C3,"children":Question3},
-        {"label":C4,"children":Question3},
-        {"label":C5,"children":Question3}]
-    }],Question1=[{
-        'label':Q1,
-        'children':[{"label":C1,"children":Question2},
-        {"label":C2,"children":Question7}]
-    }];
-    
-//  var Guide= [{
-//      'label':"To gain entry to 2089, please answer the following questions.",
-//      'children':[{"label":"Continue","children":Question1}]
-//  }];
-var Guide=JSON.parse(localStorage.getItem("local_time_customhouse"))||[{"label":"To gain entry to 2089, please answer the following questions.","children":[{"label":"Continue","children":[{"label":"Select the purpose of your travel.","children":[{"label":"Temporary Stay","children":[{"label":"Select your current time citizenship.","children":[{"label":"Information Age (1970-2030)","children":[{"label":"Select your Time Wanderer passport.","children":[{"label":"Regular","children":[{"label":"Select the purpose of your trip to 2089.","children":[{"label":"Tourism","data":[{"require":"Information Age (1970-2030)","Result":"Additional information required.","Explain":"Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention."},{"require":"Experience Age (2031-2070)","Result":"Result 4","Explain":"Result 4 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 7","Explain":"Result 7 explain"}]},{"label":"Business","data":[{"require":"Information Age (1970-2030)","Result":"Result 2","Explain":"Result 2 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 5","Explain":"Result 5 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 8","Explain":"Result 8 explain"}]},{"label":"Study","data":[{"require":"Information Age (1970-2030)","Result":"Result 3","Explain":"Result 3 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 6","Explain":"Result 6 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 9","Explain":"Result 9 explain"}]}]}]},{"label":"Diplomatic","children":[{"label":"Question 5","children":[{"label":"Choice 12","data":[{"require":"Information Age (1970-2030)","Result":"Result 10","Explain":"Result 10 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 13","Explain":"Result 13 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 16","Explain":"Result 16 explain"}]},{"label":"Choice 13","data":[{"require":"Information Age (1970-2030)","Result":"Result 11","Explain":"Result 11 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 14","Explain":"Result 14 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 17","Explain":"Result 17 explain"}]},{"label":"Choice 14","data":[{"require":"Information Age (1970-2030)","Result":"Result 12","Explain":"Result 12 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 15","Explain":"Result 15 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 18","Explain":"Result 18 explain"}]}]}]},{"label":"Time Police","children":[{"label":"Question 6","children":[{"label":"Choice 15","data":[{"require":"Information Age (1970-2030)","Result":"Result 19","Explain":"Result 19 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 22","Explain":"Result 22 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 25","Explain":"Result 25 explain"}]},{"label":"Choice 16","data":[{"require":"Information Age (1970-2030)","Result":"Result 20","Explain":"Result 20 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 26","Explain":"Result 26 explain"}]},{"label":"Choice 17","data":[{"require":"Information Age (1970-2030)","Result":"Result 21","Explain":"Result 21 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 24","Explain":"Result 24 explain"}]}]}]}]}]},{"label":"Experience Age (2031-2070)","children":[{"label":"Select your Time Wanderer passport.","children":[{"label":"Regular","children":[{"label":"Select the purpose of your trip to 2089.","children":[{"label":"Tourism","data":[{"require":"Information Age (1970-2030)","Result":"Additional information required.","Explain":"Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention."},{"require":"Experience Age (2031-2070)","Result":"Result 4","Explain":"Result 4 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 7","Explain":"Result 7 explain"}]},{"label":"Business","data":[{"require":"Information Age (1970-2030)","Result":"Result 2","Explain":"Result 2 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 5","Explain":"Result 5 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 8","Explain":"Result 8 explain"}]},{"label":"Study","data":[{"require":"Information Age (1970-2030)","Result":"Result 3","Explain":"Result 3 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 6","Explain":"Result 6 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 9","Explain":"Result 9 explain"}]}]}]},{"label":"Diplomatic","children":[{"label":"Question 5","children":[{"label":"Choice 12","data":[{"require":"Information Age (1970-2030)","Result":"Result 10","Explain":"Result 10 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 13","Explain":"Result 13 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 16","Explain":"Result 16 explain"}]},{"label":"Choice 13","data":[{"require":"Information Age (1970-2030)","Result":"Result 11","Explain":"Result 11 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 14","Explain":"Result 14 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 17","Explain":"Result 17 explain"}]},{"label":"Choice 14","data":[{"require":"Information Age (1970-2030)","Result":"Result 12","Explain":"Result 12 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 15","Explain":"Result 15 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 18","Explain":"Result 18 explain"}]}]}]},{"label":"Time Police","children":[{"label":"Question 6","children":[{"label":"Choice 15","data":[{"require":"Information Age (1970-2030)","Result":"Result 19","Explain":"Result 19 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 22","Explain":"Result 22 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 25","Explain":"Result 25 explain"}]},{"label":"Choice 16","data":[{"require":"Information Age (1970-2030)","Result":"Result 20","Explain":"Result 20 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 26","Explain":"Result 26 explain"}]},{"label":"Choice 17","data":[{"require":"Information Age (1970-2030)","Result":"Result 21","Explain":"Result 21 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 24","Explain":"Result 24 explain"}]}]}]}]}]},{"label":"Exoplanets Age (2131-2200)","children":[{"label":"Select your Time Wanderer passport.","children":[{"label":"Regular","children":[{"label":"Select the purpose of your trip to 2089.","children":[{"label":"Tourism","data":[{"require":"Information Age (1970-2030)","Result":"Additional information required.","Explain":"Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention."},{"require":"Experience Age (2031-2070)","Result":"Result 4","Explain":"Result 4 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 7","Explain":"Result 7 explain"}]},{"label":"Business","data":[{"require":"Information Age (1970-2030)","Result":"Result 2","Explain":"Result 2 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 5","Explain":"Result 5 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 8","Explain":"Result 8 explain"}]},{"label":"Study","data":[{"require":"Information Age (1970-2030)","Result":"Result 3","Explain":"Result 3 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 6","Explain":"Result 6 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 9","Explain":"Result 9 explain"}]}]}]},{"label":"Diplomatic","children":[{"label":"Question 5","children":[{"label":"Choice 12","data":[{"require":"Information Age (1970-2030)","Result":"Result 10","Explain":"Result 10 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 13","Explain":"Result 13 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 16","Explain":"Result 16 explain"}]},{"label":"Choice 13","data":[{"require":"Information Age (1970-2030)","Result":"Result 11","Explain":"Result 11 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 14","Explain":"Result 14 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 17","Explain":"Result 17 explain"}]},{"label":"Choice 14","data":[{"require":"Information Age (1970-2030)","Result":"Result 12","Explain":"Result 12 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 15","Explain":"Result 15 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 18","Explain":"Result 18 explain"}]}]}]},{"label":"Time Police","children":[{"label":"Question 6","children":[{"label":"Choice 15","data":[{"require":"Information Age (1970-2030)","Result":"Result 19","Explain":"Result 19 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 22","Explain":"Result 22 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 25","Explain":"Result 25 explain"}]},{"label":"Choice 16","data":[{"require":"Information Age (1970-2030)","Result":"Result 20","Explain":"Result 20 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 26","Explain":"Result 26 explain"}]},{"label":"Choice 17","data":[{"require":"Information Age (1970-2030)","Result":"Result 21","Explain":"Result 21 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 23","Explain":"Result 23 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 24","Explain":"Result 24 explain"}]}]}]}]}]}]}]},{"label":"Time Immigration","children":[{"label":"Select your current time citizenship.","children":[{"label":"Information Age (1970-2030)","children":[{"label":"Question 8","children":[{"label":"Choice 21","data":[{"require":"Information Age (1970-2030)","Result":"Result 28","Explain":"Result 28 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 31","Explain":"Result 31 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 34","Explain":"Result 34 explain"}]},{"label":"Choice 22","data":[{"require":"Information Age (1970-2030)","Result":"Result 29","Explain":"Result 29 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 32","Explain":"Result 32 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 35","Explain":"Result 35 explain"}]},{"label":"Choice 23","data":[{"require":"Information Age (1970-2030)","Result":"Result 30","Explain":"Result 30 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 33","Explain":"Result 33 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 36","Explain":"Result 36 explain"}]}]}]},{"label":"Experience Age (2031-2070)","children":[{"label":"Question 8","children":[{"label":"Choice 21","data":[{"require":"Information Age (1970-2030)","Result":"Result 28","Explain":"Result 28 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 31","Explain":"Result 31 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 34","Explain":"Result 34 explain"}]},{"label":"Choice 22","data":[{"require":"Information Age (1970-2030)","Result":"Result 29","Explain":"Result 29 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 32","Explain":"Result 32 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 35","Explain":"Result 35 explain"}]},{"label":"Choice 23","data":[{"require":"Information Age (1970-2030)","Result":"Result 30","Explain":"Result 30 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 33","Explain":"Result 33 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 36","Explain":"Result 36 explain"}]}]}]},{"label":"Exoplanets Age (2131-2200)","children":[{"label":"Question 8","children":[{"label":"Choice 21","data":[{"require":"Information Age (1970-2030)","Result":"Result 28","Explain":"Result 28 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 31","Explain":"Result 31 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 34","Explain":"Result 34 explain"}]},{"label":"Choice 22","data":[{"require":"Information Age (1970-2030)","Result":"Result 29","Explain":"Result 29 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 32","Explain":"Result 32 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 35","Explain":"Result 35 explain"}]},{"label":"Choice 23","data":[{"require":"Information Age (1970-2030)","Result":"Result 30","Explain":"Result 30 explain"},{"require":"Experience Age (2031-2070)","Result":"Result 33","Explain":"Result 33 explain"},{"require":"Exoplanets Age (2131-2200)","Result":"Result 36","Explain":"Result 36 explain"}]}]}]}]}]}]}]}]}];
+			var Q1 = "Select the purpose of your travel.",
+				Q2 = "Select your current time citizenship.",
+				Q3 = "Select your Time Wanderer passport.",
+				Q4 = "Select the purpose of your trip to 2089.",
+				Q5 = "Question 5",
+				Q6 = "Question 6",
+				Q7 = "Select your current time citizenship.",
+				Q8 = "Question 8",
+				/**this is choice */
+				C1 = "Temporary Stay",
+				C2 = "Time Immigration",
+				C3 = "Information Age (1970-2030)",
+				C4 = "Experience Age (2031-2070)",
+				C5 = "Exoplanets Age (2131-2200)",
+				C6 = "Regular",
+				C7 = "Diplomatic",
+				C8 = "Time Police",
+				C9 = "Tourism",
+				C10 = "Business",
+				C11 = "Study",
+				C12 = "Choice 12",
+				C13 = "Choice 13",
+				C14 = "Choice 14",
+				C15 = "Choice 15",
+				C16 = "Choice 16",
+				C17 = "Choice 17",
+				C18 = "Information Age (1970-2030)",
+				C19 = "Experience Age (2031-2070)",
+				C20 = "Exoplanets Age (2131-2200)",
+				C21 = "Choice 21",
+				C22 = "Choice 22",
+				C23 = "Choice 23",
+				/*this is result,R1 is Result1 & R1E is explain of R1 */
+				R1 = "Additional information required.",
+				R2 = "Result 2",
+				R3 = "Result 3",
+				R4 = "Result 4",
+				R5 = "Result 5",
+				R6 = "Result 6",
+				R7 = "Result 7",
+				R8 = "Result 8",
+				R9 = "Result 9",
+				R10 = "Result 10",
+				R11 = "Result 11",
+				R12 = "Result 12",
+				R13 = "Result 13",
+				R14 = "Result 14",
+				R15 = "Result 15",
+				R16 = "Result 16",
+				R17 = "Result 17",
+				R18 = "Result 18",
+				R19 = "Result 19",
+				R20 = "Result 20",
+				R21 = "Result 21",
+				R22 = "Result 22",
+				R23 = "Result 23",
+				R24 = "Result 24",
+				R25 = "Result 25",
+				R26 = "Result 26",
+				R27 = "Result 27",
+				R28 = "Result 28",
+				R29 = "Result 29",
+				R30 = "Result 30",
+				R31 = "Result 31",
+				R32 = "Result 32",
+				R33 = "Result 33",
+				R34 = "Result 34",
+				R35 = "Result 35",
+				R36 = "Result 36"
+			/*this is explain of result */
+			R1E = "Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention.",
+				R2E = "Result 2 explain",
+				R3E = "Result 3 explain",
+				R4E = "Result 4 explain",
+				R5E = "Result 5 explain",
+				R6E = "Result 6 explain",
+				R7E = "Result 7 explain",
+				R8E = "Result 8 explain",
+				R9E = "Result 9 explain",
+				R10E = "Result 10 explain",
+				R11E = "Result 11 explain",
+				R12E = "Result 12 explain",
+				R13E = "Result 13 explain",
+				R14E = "Result 14 explain",
+				R15E = "Result 15 explain",
+				R16E = "Result 16 explain",
+				R17E = "Result 17 explain",
+				R18E = "Result 18 explain",
+				R19E = "Result 19 explain",
+				R20E = "Result 20 explain",
+				R21E = "Result 21 explain",
+				R22E = "Result 22 explain",
+				R23E = "Result 23 explain",
+				R24E = "Result 24 explain",
+				R25E = "Result 25 explain",
+				R26E = "Result 26 explain",
+				R27E = "Result 27 explain",
+				R28E = "Result 28 explain",
+				R29E = "Result 29 explain",
+				R30E = "Result 30 explain",
+				R31E = "Result 31 explain",
+				R32E = "Result 32 explain",
+				R33E = "Result 33 explain",
+				R34E = "Result 34 explain",
+				R35E = "Result 35 explain",
+				R36E = "Result 36 explain";
+			/* computer code */
+			var Question8 = [{
+					'label': Q8,
+					'children': [{
+							"label": C21,
+							"data": [{
+									'require': C18,
+									'Result': R28,
+									'Explain': R28E
+								},
+								{
+									'require': C19,
+									'Result': R31,
+									'Explain': R31E
+								},
+								{
+									'require': C20,
+									'Result': R34,
+									'Explain': R34E
+								}
+							]
+						},
+						{
+							"label": C22,
+							"data": [{
+									'require': C18,
+									'Result': R29,
+									'Explain': R29E
+								},
+								{
+									'require': C19,
+									'Result': R32,
+									'Explain': R32E
+								},
+								{
+									'require': C20,
+									'Result': R35,
+									'Explain': R35E
+								}
+							]
+						},
+						{
+							"label": C23,
+							"data": [{
+									'require': C18,
+									'Result': R30,
+									'Explain': R30E
+								},
+								{
+									'require': C19,
+									'Result': R33,
+									'Explain': R33E
+								},
+								{
+									'require': C20,
+									'Result': R36,
+									'Explain': R36E
+								}
+							]
+						}
+					]
+				}],
+				Question7 = [{
+					'label': Q7,
+					'children': [{
+							"label": C18,
+							"children": Question8
+						},
+						{
+							"label": C19,
+							"children": Question8
+						},
+						{
+							"label": C20,
+							"children": Question8
+						}
+					]
+				}],
+				Question6 = [{
+					'label': Q6,
+					'children': [{
+							"label": C15,
+							"data": [{
+									'require': C3,
+									'Result': R19,
+									'Explain': R19E
+								},
+								{
+									'require': C4,
+									'Result': R22,
+									'Explain': R22E
+								},
+								{
+									'require': C5,
+									'Result': R25,
+									'Explain': R25E
+								}
+							]
+						},
+						{
+							"label": C16,
+							"data": [{
+									'require': C3,
+									'Result': R20,
+									'Explain': R20E
+								},
+								{
+									'require': C4,
+									'Result': R23,
+									'Explain': R23E
+								},
+								{
+									'require': C5,
+									'Result': R26,
+									'Explain': R26E
+								}
+							]
+						},
+						{
+							"label": C17,
+							"data": [{
+									'require': C3,
+									'Result': R21,
+									'Explain': R21E
+								},
+								{
+									'require': C4,
+									'Result': R23,
+									'Explain': R23E
+								},
+								{
+									'require': C5,
+									'Result': R24,
+									'Explain': R24E
+								}
+							]
+						}
+					]
+				}],
+				Question5 = [{
+					'label': Q5,
+					'children': [{
+							"label": C12,
+							"data": [{
+									'require': C3,
+									'Result': R10,
+									'Explain': R10E
+								},
+								{
+									'require': C4,
+									'Result': R13,
+									'Explain': R13E
+								},
+								{
+									'require': C5,
+									'Result': R16,
+									'Explain': R16E
+								}
+							]
+						},
+						{
+							"label": C13,
+							"data": [{
+									'require': C3,
+									'Result': R11,
+									'Explain': R11E
+								},
+								{
+									'require': C4,
+									'Result': R14,
+									'Explain': R14E
+								},
+								{
+									'require': C5,
+									'Result': R17,
+									'Explain': R17E
+								}
+							]
+						},
+						{
+							"label": C14,
+							"data": [{
+									'require': C3,
+									'Result': R12,
+									'Explain': R12E
+								},
+								{
+									'require': C4,
+									'Result': R15,
+									'Explain': R15E
+								},
+								{
+									'require': C5,
+									'Result': R18,
+									'Explain': R18E
+								}
+							]
+						}
+					]
+				}],
+				Question4 = [{
+					'label': Q4,
+					'children': [{
+							"label": C9,
+							"data": [{
+									'require': C3,
+									'Result': R1,
+									'Explain': R1E
+								},
+								{
+									'require': C4,
+									'Result': R4,
+									'Explain': R4E
+								},
+								{
+									'require': C5,
+									'Result': R7,
+									'Explain': R7E
+								}
+							]
+						},
+						{
+							"label": C10,
+							"data": [{
+									'require': C3,
+									'Result': R2,
+									'Explain': R2E
+								},
+								{
+									'require': C4,
+									'Result': R5,
+									'Explain': R5E
+								},
+								{
+									'require': C5,
+									'Result': R8,
+									'Explain': R8E
+								}
+							]
+						},
+						{
+							"label": C11,
+							"data": [{
+									'require': C3,
+									'Result': R3,
+									'Explain': R3E
+								},
+								{
+									'require': C4,
+									'Result': R6,
+									'Explain': R6E
+								},
+								{
+									'require': C5,
+									'Result': R9,
+									'Explain': R9E
+								}
+							]
+						}
+					]
+				}],
+				Question3 = [{
+					'label': Q3,
+					'children': [{
+							"label": C6,
+							"children": Question4
+						},
+						{
+							"label": C7,
+							"children": Question5
+						},
+						{
+							"label": C8,
+							"children": Question6
+						}
+					]
+				}],
+				Question2 = [{
+					'label': Q2,
+					'children': [{
+							"label": C3,
+							"children": Question3
+						},
+						{
+							"label": C4,
+							"children": Question3
+						},
+						{
+							"label": C5,
+							"children": Question3
+						}
+					]
+				}],
+				Question1 = [{
+					'label': Q1,
+					'children': [{
+							"label": C1,
+							"children": Question2
+						},
+						{
+							"label": C2,
+							"children": Question7
+						}
+					]
+				}];
+
+			//  var Guide= [{
+			//      'label':"To gain entry to 2089, please answer the following questions.",
+			//      'children':[{"label":"Continue","children":Question1}]
+			//  }];
+			var Guide = JSON.parse(localStorage.getItem("local_time_customhouse"));
+			if(!Guide) {
+				Guide = [
+	{
+		"label": "To gain entry to 2089, please answer the following questions.",
+		"children": [
+			{
+				"label": "Continue",
+				"children": [
+					{
+						"label": "Select the purpose of your travel.",
+						"children": [
+							{
+								"label": "Temporary Stay",
+								"children": [
+									{
+										"label": "Select your current time citizenship.",
+										"children": [
+											{
+												"label": "Information Age (1970-2030)",
+												"children": [
+													{
+														"label": "Select your Time Wanderer passport.",
+														"children": [
+															{
+																"label": "Regular",
+																"children": [
+																	{
+																		"label": "Select the purpose of your trip to 2089.",
+																		"children": [
+																			{
+																				"label": "Tourism",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Additional information required.",
+																						"data": "Scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room for indefinite detention."
+																					}
+																				]
+																			}, {
+																				"label": "Business",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 2",
+																						"data": "Result 2 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Study",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 3",
+																						"data": "Result 3 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Diplomatic",
+																"children": [
+																	{
+																		"label": "Question 5",
+																		"children": [
+																			{
+																				"label": "Choice 12",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 10",
+																						"data": "Result 10 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 13",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 11",
+																						"data": "Result 11 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 14",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 12",
+																						"data": "Result 12 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Time Police",
+																"children": [
+																	{
+																		"label": "Question 6",
+																		"children": [
+																			{
+																				"label": "Choice 15",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 19",
+																						"data": "Result 19 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 16",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 20",
+																						"data": "Result 20 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 17",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 21",
+																						"data": "Result 21 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}, {
+												"label": "Experience Age (2031-2070)",
+												"children": [
+													{
+														"label": "Select your Time Wanderer passport.",
+														"children": [
+															{
+																"label": "Regular",
+																"children": [
+																	{
+																		"label": "Select the purpose of your trip to 2089.",
+																		"children": [
+																			{
+																				"label": "Tourism",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 4",
+																						"data": "Result 4 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Business",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 5",
+																						"data": "Result 5 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Study",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 6",
+																						"data": "Result 6 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Diplomatic",
+																"children": [
+																	{
+																		"label": "Question 5",
+																		"children": [
+																			{
+																				"label": "Choice 12",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 13",
+																						"data": "Result 13 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 13",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 14",
+																						"data": "Result 14 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 14",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 15",
+																						"data": "Result 15 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Time Police",
+																"children": [
+																	{
+																		"label": "Question 6",
+																		"children": [
+																			{
+																				"label": "Choice 15",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 22",
+																						"data": "Result 22 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 16",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 23",
+																						"data": "Result 23 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 17",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 23",
+																						"data": "Result 23 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}, {
+												"label": "Exoplanets Age (2131-2200)",
+												"children": [
+													{
+														"label": "Select your Time Wanderer passport.",
+														"children": [
+															{
+																"label": "Regular",
+																"children": [
+																	{
+																		"label": "Select the purpose of your trip to 2089.",
+																		"children": [
+																			{
+																				"label": "Tourism",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 7",
+																						"data": "Result 7 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Business",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 8",
+																						"data": "Result 8 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Study",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 9",
+																						"data": "Result 9 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Diplomatic",
+																"children": [
+																	{
+																		"label": "Question 5",
+																		"children": [
+																			{
+																				"label": "Choice 12",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 16",
+																						"data": "Result 16 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 13",
+																				"children": [
+																					{
+																						"leaf": true,
+																						"label": "Result 17",
+																						"data": "Result 17 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 14",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 18",
+																						"data": "Result 18 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}, {
+																"label": "Time Police",
+																"children": [
+																	{
+																		"label": "Question 6",
+																		"children": [
+																			{
+																				"label": "Choice 15",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 25",
+																						"data": "Result 25 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 16",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 26",
+																						"data": "Result 26 explain"
+																					}
+																				]
+																			}, {
+																				"label": "Choice 17",
+																				"children": [
+																					 {
+																						"leaf": true,
+																						"label": "Result 24",
+																						"data": "Result 24 explain"
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}, {
+								"label": "Time Immigration",
+								"children": [
+									{
+										"label": "Select your current time citizenship.",
+										"children": [
+											{
+												"label": "Information Age (1970-2030)",
+												"children": [
+													{
+														"label": "Question 8",
+														"children": [
+															{
+																"label": "Choice 21",
+																"children": [
+																	{
+																		"leaf": true,
+																		"label": "Result 28",
+																		"data": "Result 28 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 22",
+																"children": [
+																	{
+																		"leaf": true,
+																		"label": "Result 29",
+																		"data": "Result 29 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 23",
+																"children": [
+																	{
+																		"leaf": true,
+																		"label": "Result 30",
+																		"data": "Result 30 explain"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}, {
+												"label": "Experience Age (2031-2070)",
+												"children": [
+													{
+														"label": "Question 8",
+														"children": [
+															{
+																"label": "Choice 21",
+																"children": [
+																	 {
+																		"leaf": true,
+																		"label": "Result 31",
+																		"data": "Result 31 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 22",
+																"children": [
+																	{
+																		"leaf": true,
+																		"label": "Result 32",
+																		"data": "Result 32 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 23",
+																"children": [
+																	 {
+																		"leaf": true,
+																		"label": "Result 33",
+																		"data": "Result 33 explain"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}, {
+												"label": "Exoplanets Age (2131-2200)",
+												"children": [
+													{
+														"label": "Question 8",
+														"children": [
+															{
+																"label": "Choice 21",
+																"children": [
+																	 {
+																		"leaf": true,
+																		"label": "Result 34",
+																		"data": "Result 34 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 22",
+																"children": [
+																	 {
+																		"leaf": true,
+																		"label": "Result 35",
+																		"data": "Result 35 explain"
+																	}
+																]
+															}, {
+																"label": "Choice 23",
+																"children": [
+																	{
+																		"leaf": true,
+																		"label": "Result 36",
+																		"data": "Result 36 explain"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+];
+			}
 		</script>
 	</body>
 

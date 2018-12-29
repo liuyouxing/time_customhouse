@@ -2,9 +2,9 @@
 
 	<div class="col">
 		<div class="wrapper-md">
-			<div class="b-a bg-light dk r r-2x">
+			<div class="b-a bg-light dk r r-2x" style="max-height: 40rem;overflow-y: auto;">
 				<span v-if="doing_async">...loading...</span>
-				<abn-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="2" initial-selection="Granny Smith" icon-leaf="fa fa-file-o" icon-expand="fa fa-plus" icon-collapse="fa fa-minus">
+				<abn-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="11" initial-selection="Granny Smith" icon-leaf="fa fa-file-o" icon-expand="fa fa-plus" icon-collapse="fa fa-minus">
 				</abn-tree>
 			</div>
 		</div>
@@ -12,7 +12,7 @@
 	<div class="col">
 		<div class="wrapper-md">
 			<div class="b-a bg-light dk r r-2x" style="padding: 10px;">
-				<h5>操作节点:</h5>
+				<h5 style="text-align: center;"><span style="color: red;" v-bind="outputName"></span>节点</h5>
 				<div class="m-t-sm m-b-sm">
 					<button v-click="try_adding_a_branch()" class="btn btn-success btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>增加节点</button>
 					<button v-click="try_deleting_a_branch()" class="btn btn-warning btn-sm"><i class="fa fa-fw m-r-xs fa-plus"></i>删除节点</button>
@@ -28,36 +28,29 @@
 				<div class="form-group row">
 					<label for="Textarea0" class="col-sm-2 col-form-label">编辑节点:</label>
 					<div class="col-sm-10">
-						<textarea class="form-control" id="Textarea1" rows="1" v-model='output.label'></textarea>
+						<textarea class="form-control" id="Textarea0" rows="1" v-model='output.label'></textarea>
 					</div>
 				</div>
-				<div class="line b-b line-lg"></div>
-				<div v-repeat="row in output.data">
-				<h5>通关结果{{$index+1}}:</h5>
 				<div class="form-group row">
-					<label for="Textarea1" class="col-sm-2 col-form-label">必选条件：</label>
-					<div class="col-sm-10">
-						<textarea class="form-control" id="Textarea1" rows="1" v-model='row.require'></textarea>
+					<label class="col-sm-2"></label>
+					<div class="col-sm-10 ">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" v-model="output.leaf" v-change="doChange()">
+							<label class="form-check-label" for="inlineCheckbox1">设为结果节点</label>
+						</div>
 
 					</div>
 				</div>
-				<div class="form-group row">
-					<label for="Textarea2" class="col-sm-2 col-form-label">通关结果：</label>
+				<div class="form-group row" v-show="output.leaf">
+					<label for="Textarea1" class="col-sm-2 col-form-label">节点说明:</label>
 					<div class="col-sm-10">
-						<textarea class="form-control" id="Textarea2" rows="1" v-model='row.Result'></textarea>
+						<textarea class="form-control" id="Textarea1" rows="3" v-model='output.data'></textarea>
 					</div>
 				</div>
-				<div class="form-group row">
-					<label for="Textarea3" class="col-sm-2 col-form-label">结果描述：</label>
-					<div class="col-sm-10">
-						<textarea class="form-control" id="Textarea3" rows="2" v-model='row.Explain'></textarea>
-					</div>
-				</div>
-				</div>
+				<div class="line b-b line-lg"></div>
+
 			</div>
 		</div>
 	</div>
-	
-	
-	
+
 </div>

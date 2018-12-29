@@ -15,24 +15,27 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		});
 	}])
 	.controller("indexCtrl", ['$scope', function($scope) {
-		var Answers = [];
+		//var Answers = [];
 		$scope.$root.dataJson = Guide[0];
 		$scope.doIt = function(item) {
-			Answers.push(item.label);
-			if(item.children && item.children.length == 1) {
+			//Answers.push(item.label);
+			if(item.children && item.children.length==1){
 				$scope.dataJson = item.children[0];
-			} else {
-				for(var i = 0; i < item.data.length; i++) {
-					var resultObj = item.data[i];
-					for(var j = 0; j < Answers.length; j++) {
-						if(Answers[j] == resultObj.require) {
-							$scope.dataJson = resultObj;
-							return;
-						}
-					}
-
-				}
+			}else{
+				alert("抱歉，没有找到合适的结果！请检查数据设置。");
 			}
+//			else {
+//				for(var i = 0; i < item.data.length; i++) {
+//					var resultObj = item.data[i];
+//					for(var j = 0; j < Answers.length; j++) {
+//						if(Answers[j] == resultObj.require) {
+//							$scope.dataJson = resultObj;
+//							return;
+//						}
+//					}
+//
+//				}
+//			}
 
 		};
 		$scope.exit = function() {

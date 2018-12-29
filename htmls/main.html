@@ -1,5 +1,5 @@
 <div class="container" v-controller="indexCtrl">
-	<div style="margin-top: 8rem" v-show="dataJson.children">
+	<div style="margin-top: 8rem" v-show="!dataJson.leaf">
 		<h1 class="display-4" v-bind="dataJson.label"></h1>
 		<br />
 		<br />
@@ -11,11 +11,11 @@
 		</div>
 	</div>
 
-	<div style="margin-top: 6rem" v-show="!dataJson.children">
-		<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.Result"></h1>
+	<div style="margin-top: 6rem" v-show="dataJson.leaf">
+		<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
 		<br />
 		<br />
-		<p class="lead" v-bind="dataJson.Explain" style="font-size: 3rem;"></p>
+		<p class="lead" v-bind="dataJson.data" style="font-size: 3rem;"></p>
 		<br />
 		<span class="display-4" style="border: white solid 1px;cursor:pointer;font-size: 3.5rem;" v-click="exit();" v-bind="'Exit'"></span>
 	</div>
