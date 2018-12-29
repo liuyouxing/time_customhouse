@@ -74,11 +74,11 @@ vx.module('ibsapp').controller('AbnTestController', ['$scope',function($scope) {
 	//生成JSON
 	$scope.create_a_json = function() {
 		localStorage.setItem("local_time_customhouse2", JSON.stringify($scope.my_data))
-		alert("本机存储成功！！！如想修改服务器数据,请“复制数据”并提交给作者.")
+		alert("本机存储成功！您可以通过访问链接，查看效果。")
 	};
 	$scope.delete_json = function() {
 		localStorage.removeItem("local_time_customhouse2");
-		alert('还原成功');
+		alert('还原成功！');
 	};
 	$scope.copy_json = function() {
 		var Url2 = JSON.stringify($scope.my_data);
@@ -89,6 +89,6 @@ vx.module('ibsapp').controller('AbnTestController', ['$scope',function($scope) {
 		document.execCommand("Copy"); // 执行浏览器复制命令
 		oInput.className = 'oInput';
 		oInput.style.display = 'none';
-		alert('复制成功');
+		alert('复制成功！');
 	};
 }]);
