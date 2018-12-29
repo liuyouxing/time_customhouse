@@ -14,7 +14,7 @@ vx.module('ibsapp').controller('AbnTestController', ['$scope',function($scope) {
 			}
 		}
 	};
-	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse")) || Guide;
+	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse2")) || Guide;
 	//console.log(JSON.stringify($scope.my_data));
 	$scope.my_tree = tree = {};
 	$scope.doChange=function(){
@@ -73,11 +73,11 @@ vx.module('ibsapp').controller('AbnTestController', ['$scope',function($scope) {
 	};
 	//生成JSON
 	$scope.create_a_json = function() {
-		localStorage.setItem("local_time_customhouse", JSON.stringify($scope.my_data))
+		localStorage.setItem("local_time_customhouse2", JSON.stringify($scope.my_data))
 		alert("本机存储成功！！！如想修改服务器数据,请“复制数据”并提交给作者.")
 	};
 	$scope.delete_json = function() {
-		localStorage.removeItem("local_time_customhouse");
+		localStorage.removeItem("local_time_customhouse2");
 		alert('还原成功');
 	};
 	$scope.copy_json = function() {

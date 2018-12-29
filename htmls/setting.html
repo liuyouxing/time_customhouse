@@ -2,7 +2,7 @@
 
 	<div class="col">
 		<div class="wrapper-md">
-			<div class="b-a bg-light dk r r-2x" style="max-height: 40rem;overflow-y: auto;">
+			<div class="b-a bg-light dk r r-2x" style="max-height: 34rem;overflow-y: auto;">
 				<span v-if="doing_async">...loading...</span>
 				<abn-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="11" initial-selection="Granny Smith" icon-leaf="fa fa-file-o" icon-expand="fa fa-plus" icon-collapse="fa fa-minus">
 				</abn-tree>
@@ -48,6 +48,9 @@
 					</div>
 				</div>
 				<div class="line b-b line-lg"></div>
+				<div class="form-group row">
+					<label class="col-sm-12">温馨提示：“问题节点”和“结果节点”同级只能有一个；“选项节点”同级可以有多个；</label>
+				</div>
 
 			</div>
 		</div>
