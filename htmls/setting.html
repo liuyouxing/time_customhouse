@@ -24,7 +24,7 @@
 					<button v-click="my_tree.expand_all()" class="btn btn-default btn-sm">展开所有</button>
 					<button v-click="my_tree.collapse_all()" class="btn btn-default btn-sm">收缩所有</button>
 					<!--fa-compress <i class="fa fa-expand m-r-xs"></i>-->
-					<button v-click="toggleFullScreen()" class="btn btn-danger btn-sm">{{fullName}}</button>
+					<button v-click="toggleFullScreen()" class="btn btn-danger btn-sm"><span v-bind="fullName"></span></button>
 				</div>
 				<div class="line b-b line-lg"></div>
 				<div class="form-group row">
