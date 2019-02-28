@@ -12,7 +12,33 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		$urlRouterProvider.otherwise(function($injector) {
 			var $state = $injector.get("$state");
 			$state.go("/main");
-		});
+		});		
+	}])
+	.run(['$rootScope',function($rootScope){
+		$rootScope.fullName="全屏";
+		$rootScope.toggleFullScreen=function(){
+			if($rootScope.fullName=='全屏'){
+				if(document.documentElement.requestFullscreen) {
+				document.documentElement.requestFullscreen();
+			  } else if(document.documentElement.mozRequestFullScreen) {
+				document.documentElement.mozRequestFullScreen();
+			  } else if(document.documentElement.webkitRequestFullscreen) {
+				document.documentElement.webkitRequestFullscreen();
+			  } else if(document.documentElement.msRequestFullscreen) {
+				document.documentElement.msRequestFullscreen();
+			  }
+			  $rootScope.fullName='退屏';
+			}else{
+				if(document.exitFullscreen) {
+					document.exitFullscreen();
+				  } else if(document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+				  } else if(document.webkitExitFullscreen) {
+					document.webkitExitFullscreen();
+				  }
+				  $rootScope.fullName='全屏';
+			}			
+		};
 	}])
 	.controller("indexCtrl", ['$scope', function($scope) {
 		$scope.dataJson = Guide[0];

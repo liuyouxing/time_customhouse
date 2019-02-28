@@ -2,7 +2,7 @@
 
 	<div class="container" v-controller="indexCtrl">
 		<div style="margin-top: 8rem;margin-left: 2rem;margin-right: 2rem;" v-show="!dataJson.leaf">
-			<h1 class="display-4" v-bind="dataJson.label"></h1>
+			<h1 class="display-4" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
 			<br />
 			<br />
 			<br />
