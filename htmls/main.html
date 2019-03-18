@@ -1,33 +1,30 @@
 <div class="jumbotron jumbotron-fluid">
 
-	<div class="container" v-controller="indexCtrl">
-		<div style="padding: 150px;" v-show="!dataJson.leaf">
-			<h1 class="display-4" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
-			<br />
-			<br />
-			<br />
-			<br />
-			<div class="row">
-				<div v-class="dataJson.children.length==1?'col-lg-6 myclass':'col-lg myclass'" v-repeat="item in dataJson.children" v-click="doIt(item)">
-<span class="display-4 underline" style="font-size: 3.5rem;" v-bind="item.label"></span>
-				</div>
-			</div>
-		</div>
+  <div class="container" v-controller="indexCtrl">
+    <div style="padding: 150px;" v-show="!dataJson.leaf">
+      <h1 class="display-4" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="row">
+        <div v-class="dataJson.children.length==1?'col-lg-6 myclass':'col-lg myclass'" v-repeat="item in dataJson.children"
+          v-click="doIt(item)">
+          <span class="display-4 underline" style="font-size: 3.5rem;" v-bind="item.label"></span>
+        </div>
+      </div>
+    </div>
 
-		<div style="padding: 150px;" v-show="dataJson.leaf">
-			<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
-			<br />
-			<br />
-			<p class="lead" v-bind-html="trustAsHtml(dataJson.data)" style="font-size: 3.2rem;"></p>
-			<br />
-			<br />
-			<div class="row">
-				<div class="col-lg-2 myclass"  v-click="exit();">
-					<span class="display-4" style="font-size: 3.5rem;" v-bind="'Exit'"></span>
-				</div>
-			</div>
-		</div>
+    <div style="padding: 150px;" v-show="dataJson.leaf">
+      <p class="result-title" style="padding-top:400px;" v-bind="dataJson.label"></p>
+      <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
+      <div class="row">
+        <div class="col-lg-2 myclass" v-click="exit();">
+          <span class="result-btn underline" v-bind="'Exit'"></span>
+        </div>
+      </div>
+    </div>
 
-	</div>
+  </div>
 
 </div>
