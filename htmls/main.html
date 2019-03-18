@@ -2,14 +2,11 @@
 
 	<div class="container" v-controller="indexCtrl">
 		<div style="padding: 150px;" v-show="!dataJson.leaf">
-			<h1 class="display-4" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
-			<br />
-			<br />
-			<br />
-			<br />
-			<div class="row">
+			<h1 class="display-4" style="padding-top: 400px;" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
+			
+			<div class="row" style="padding-top: 300px;">
 				<div v-class="dataJson.children.length==1?'col-lg-6 myclass':'col-lg myclass'" v-repeat="item in dataJson.children" v-click="doIt(item)">
-<span class="display-4 underline" style="font-size: 3.5rem;" v-bind="item.label"></span>
+<span class="display-4 underline"  v-bind="item.label"></span>
 				</div>
 			</div>
 		</div>
