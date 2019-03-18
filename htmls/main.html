@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid">
 
 	<div class="container" v-controller="indexCtrl">
-		<div style="margin-top: 8rem;margin-left: 2rem;margin-right: 2rem;" v-show="!dataJson.leaf">
+		<div style="padding: 150px;" v-show="!dataJson.leaf">
 			<h1 class="display-4" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
 			<br />
 			<br />
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 
-		<div style="margin-top: 2rem;margin-left: 2rem;margin-right: 2rem;" v-show="dataJson.leaf">
+		<div style="padding: 150px;" v-show="dataJson.leaf">
 			<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
 			<br />
 			<br />

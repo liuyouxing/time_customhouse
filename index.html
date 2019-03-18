@@ -20,6 +20,8 @@
 				color: white;
 			}			
 			.jumbotron {
+				padding: 0;
+    			margin: 0;
 				background-color: #000;
 			}			
 			@font-face {
@@ -30,6 +32,9 @@
 			}		
 			.yellow{
 				color: rgb(225, 221, 51);
+            }
+            .underline a:active{
+            	color: rgb(225, 221, 51);
             }
             .underline{
                 text-decoration: underline;
@@ -42,7 +47,7 @@
             }
 
 			.display-4 {
-                font-size: 4.8rem;
+                font-size: 105pt;
 			}
 			/* .myclass {
 				 border: white solid 1px;
@@ -74,7 +79,14 @@
 				left: 270px;
 			}
 			
-			@media (min-width: 1200px) {
+			@media (min-width: 2000px) {
+				.container {
+					max-width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+			}
+			@media (min-width: 1200px and max-width:1999px) {
 				.container {
 					max-width: 1540px;
 				}
