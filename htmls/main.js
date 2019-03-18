@@ -40,7 +40,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 			}			
 		};
 	}])
-	.controller("indexCtrl", ['$scope', function($scope) {
+	.controller("indexCtrl", ['$scope','$sce', function($scope,$sce) {
 		$scope.dataJson = Guide[0];
 		$scope.doIt = function(item) {
 			if(item.children && item.children.length == 1) {
@@ -64,6 +64,9 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		};
 		$scope.exit = function() {
 			$scope.dataJson = Guide[0];
+		};
+		$scope.trustAsHtml=function(htm){
+			return $sce.trustAsHtml(htm);
 		};
 
 	}]);

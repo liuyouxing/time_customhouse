@@ -18,7 +18,7 @@
 			<h1 class="display-4" style="color: rgb(225, 221, 51)" v-bind="dataJson.label"></h1>
 			<br />
 			<br />
-			<p class="lead" v-bind="dataJson.data" style="font-size: 3.2rem;"></p>
+			<p class="lead" v-bind-html="trustAsHtml(dataJson.data)" style="font-size: 3.2rem;"></p>
 			<br />
 			<br />
 			<div class="row">
