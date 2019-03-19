@@ -53,8 +53,29 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		};
 	}])
 	.controller("indexCtrl", ['$scope','$sce', function($scope,$sce) {
-		$scope.dataJson = Guide[0];
-		$scope.doIt = function(item) {
+		$scope.startup=function(){
+			$scope.dataJson = Guide[0];
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			if(isAndroid || isiOS){
+				$scope.isMobile=true;
+			}else{
+				$scope.isMobile=false;
+			}
+		}
+		
+		$scope.doIt = function(item,flag) {
+			if($scope.isMobile){
+				if(flag){
+					return;
+				}				
+			}else{
+				if(!flag){
+					return;
+				}
+			}
+			
 			if(item.children && item.children.length == 1) {
 				$scope.dataJson = $scope.addSmallClass(item.children[0]);
 			} else {
@@ -74,7 +95,16 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 			//			}
 
 		};
-		$scope.exit = function() {
+		$scope.exit = function(flag) {
+			if($scope.isMobile){
+				if(flag){
+					return;
+				}				
+			}else{
+				if(!flag){
+					return;
+				}
+			}
 			$scope.dataJson = $scope.addSmallClass(Guide[0]);
 		};
 		$scope.trustAsHtml=function(htm){
