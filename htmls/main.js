@@ -44,7 +44,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		$scope.dataJson = Guide[0];
 		$scope.doIt = function(item) {
 			if(item.children && item.children.length == 1) {
-				$scope.dataJson = item.children[0];
+				$scope.dataJson = $scope.addSmallClass(item.children[0]);
 			} else {
 				alert("抱歉，没有找到合适的结果！请检查数据设置。");
 			}
@@ -63,10 +63,29 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 
 		};
 		$scope.exit = function() {
-			$scope.dataJson = Guide[0];
+			$scope.dataJson = $scope.chartForStyle(Guide[0]);
 		};
 		$scope.trustAsHtml=function(htm){
 			return $sce.trustAsHtml(htm);
 		};
+		$scope.addSmallClass=function(data){
+			var i=0,childData=data.children,childLen=childData.length,labelLen=0;
+			for(i;i<childLen;i++){
+				var tempLen=childData[i].label.length;
+				if(tempLen>labelLen){
+					labelLen=tempLen;
+				}				
+			}
+			if(childLen==2){
+				if(labelLen>20){
+					data.smallClass=true;
+				}
+			}else if(childLen==3){
+				if(labelLen>15){
+					data.smallClass=true;
+				}
+			}
+			return data;
+		}
 
 	}]);
