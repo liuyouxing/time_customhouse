@@ -1,4 +1,16 @@
 vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
+	.directive("ngTouchend", function () {
+    return {
+        controller: ["$scope", "$element", function ($scope, $element) {
+ 
+            $element.bind("touchend", onTouchEnd);
+            function onTouchEnd(event) {
+                var method = $element.attr("v-touchend");
+                $scope.$apply(method);
+            }
+ 
+        }]
+    }})
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('/main', {

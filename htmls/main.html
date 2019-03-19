@@ -5,7 +5,7 @@
 
       <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
         <div v-class="dataJson.smallClass?'col-lg smallclass':'col-lg display-4'" v-repeat="item in dataJson.children"
-          v-click="doIt(item)">
+          v-touchend="doIt(item)">
           <span class="underline" v-bind="item.label"></span>
         </div>
       </div>
