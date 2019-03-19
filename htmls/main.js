@@ -63,7 +63,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 
 		};
 		$scope.exit = function() {
-			$scope.dataJson = $scope.chartForStyle(Guide[0]);
+			$scope.dataJson = $scope.addSmallClass(Guide[0]);
 		};
 		$scope.trustAsHtml=function(htm){
 			return $sce.trustAsHtml(htm);
