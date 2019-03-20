@@ -69,28 +69,38 @@
 				color: rgb(254,215,40);
 			}
 
-            .borderline{
-                border-bottom: calc(13vw * 100 / 2732) solid rgb(254,215,40);
-                border-bottom: -webkit-calc(13vw * 100 / 2732) solid rgb(254,215,40);
-                line-height: calc(80vw * 400 / 8196);
-                line-height: -webkit-calc(80vw * 400 / 8196);
+            .borderline{            
+                border-bottom: calc(10vw * 100 / 2732) solid rgb(254,215,40);
+                border-bottom: -webkit-calc(10vw * 100 / 2732) solid rgb(254,215,40);
+                /* border-bottom: calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
+                /* border-bottom: -webkit-calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
+                line-height: calc(65vw * 400 / 8196);
+                line-height: -webkit-calc(65vw * 400 / 8196);
                 display: inline-block;
             }
 
 			.display-4 {
-				/* font-size: 105pt; */
 				font-size: calc(105vw * 400 / 8196);
 				font-size: -webkit-calc(105vw * 400 / 8196);
-                line-height: -webkit-calc(105vw * 400 / 8196);
                 line-height: calc(105vw * 400 / 8196);
+                line-height: -webkit-calc(105vw * 400 / 8196);
 			}
 			
 			.smallclass {
-				/* font-size: 75pt; */
 				font-size: calc(75vw * 400 / 8196);
 				font-size: -webkit-calc(75vw * 400 / 8196);
 			}
-			
+            .time_btn{
+                margin-left:calc(275vw * 100 / 2732);
+                margin-left:-webkit-calc(275vw * 100 / 2732);
+            }
+            .time_btn.smallclass{
+                margin-left:calc(100vw * 100 / 2732);
+                margin-left:-webkit-calc(100vw * 100 / 2732);
+            }
+            .time_btn:first-child{
+                margin-left:15px;
+            }
 			ul.nav.abn-tree .level-10 .indented {
 				position: relative;
 				left: 180px;
@@ -120,30 +130,6 @@
 				position: relative;
 				left: 270px;
 			}
-			/* @media (min-width: 2000px) {
-				.container {
-					max-width: 100%;
-					padding: 0;
-					margin: 0;
-				}
-			}
-			@media (min-width: 1200px) and (max-width:1999px){
-				.container {
-					max-width: 1540px;
-				}
-			}
-			
-			@media (min-width: 992px) {
-				.col-lg {
-					margin-left: 1rem;
-				}
-			}
-			
-			@media (min-width: 992px) {
-				.col-lg-4 {
-					margin-left: 1rem;
-				}
-            } */
 			
 			.row {
 				display: -webkit-flex;
@@ -177,16 +163,19 @@
 			.result-info,
 			.result-btn {
 				font-family: "SuisseIntl-SuisseIntl";
-				/* font-size: 103pt; */
-				/* font-size:75pt; */
 				font-size: calc(75vw * (400 / 8196));
-				font-size: -webkit-calc(75vw * 400 / 8196);
+				font-size: -webkit-calc(75vw * 400 / 8196);           
 			}
-			
+            .result-info{
+                line-height: calc(90vw * 400 / 8196);
+                line-height: -webkit-calc(90vw * 400 / 8196);
+            }
 			.result-btn {
 				display: inline-block;
 				margin-top: calc(140vw * 400 / 8196);
 				margin-top: -webkit-calc(140vw * 400 / 8196);
+                line-height: calc(50vw * 400 / 8196);
+                line-height: -webkit-calc(50vw * 400 / 8196);
 			}
 		</style>
 

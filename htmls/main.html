@@ -4,9 +4,9 @@
       <h1 class="display-4" style="padding-top:30vh;" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
 
       <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
-        <div v-class="dataJson.smallClass?'col-lg smallclass':'col-lg display-4'" v-repeat="item in dataJson.children"
+        <div v-class="dataJson.smallClass?'time_btn smallclass':'time_btn display-4'" v-repeat="item in dataJson.children"
           v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
-<span v-class="{'underline':item.label!=='Continue','borderline':item.label==='Continue'}" v-bind="item.label"></span>
+          <span v-class="{'underline':item.label!=='Continue','borderline':item.label==='Continue'}" v-bind="item.label"></span>
         </div>
       </div>
     </div>
@@ -14,7 +14,7 @@
     <div style="padding-left: -webkit-calc(150vw * 100 / 2732);padding-right: -webkit-calc(150vw * 100 / 2732);" v-show="dataJson.leaf">
       <p class="result-title" style="padding-top:20vh;" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
-      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
+        <span class="result-btn borderline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
     </div>
   </div>
 
