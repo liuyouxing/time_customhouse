@@ -6,7 +6,7 @@
       <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
         <div v-class="dataJson.smallClass?'col-lg smallclass':'col-lg display-4'" v-repeat="item in dataJson.children"
           v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
-          <span class="underline" v-bind="item.label"></span>
+<span v-class="{'underline':item.label!=='Continue','borderline':item.label==='Continue'}" v-bind="item.label"></span>
         </div>
       </div>
     </div>
