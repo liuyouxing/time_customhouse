@@ -246,5 +246,12 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 		oInput.className = 'oInput';
 		oInput.style.display = 'none';
 		alert('复制成功！');
-	};
+  };
+  $scope.view_json = function(){
+    if($scope.viewjson){
+      $scope.viewjson=null;
+    }else{
+      $scope.viewjson = JSON.stringify($scope.my_data);
+    }      
+  };
 }]);;
