@@ -4,18 +4,20 @@
       <h1 class="display-4" style="padding-top:30vh;" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
 
       <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
-        <div v-class="dataJson.smallClass?'time_btn smallclass':'time_btn display-4'" v-repeat="item in dataJson.children"
-          v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
-          <span v-class="item.label=='Continue'?'borderline':'underline'" v-show="item.label" v-bind="item.label"></span>
+        <div v-class="dataJson.smallClass?(item.label.indexOf('Age')>-1?'time_btn smallclass
+          small-space':(item.label.indexOf('Skilled Worker')>-1||item.label.indexOf('Time Refugee')>-1?'time_btn smallclass
+          normal-space':'time_btn smallclass')):'time_btn
+          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
+          <span class="underline" v-show="item.label" v-bind-html="trustAsHtml(item.label)"></span>
         </div>
       </div>
       <font style='font-family: "GT-America-Expanded-Bold";'>&nbsp;</font>
     </div>
 
-    <div v-press class="result-wrap" v-show="dataJson.leaf">    	
-      <p class="result-title" style="padding-top:20vh;" v-bind="dataJson.label"></p>
+    <div v-press class="result-wrap" v-show="dataJson.leaf">
+      <p class="result-title" style="padding-top:30vh;" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
-      <span class="result-btn borderline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
+      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
     </div>
   </div>
 
