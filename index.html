@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="product" content="Metro UI CSS Framework">
-  <meta name="description" content="Simple responsive css framework">
-  <meta name="author" content="CSII">
-  <meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" id="favicon">
-
-  <link rel="stylesheet" href="css/bootstrap4.min.css">
-
-  <style>
-    html,
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="product" content="Metro UI CSS Framework">
+		<meta name="description" content="Simple responsive css framework">
+		<meta name="author" content="CSII">
+		<meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" id="favicon">
+		<link rel="stylesheet" href="css/bootstrap4.min.css">
+		<style>
+			html,
 			body {
 				width: 100%;
 				height: 100%;
-			}
-			
-			html,
-			body {
 				background-color: black;
 				color: white;
 			}
@@ -47,59 +41,63 @@
 			}
 			
 			.yellow {
-				color: rgb(254,215,40);
+				color: rgb(254, 215, 40);
 			}
 			
 			.underline a:active {
-				color: rgb(254,215,40);
+				color: rgb(254, 215, 40);
 			}
 			
 			.underline {
 				text-decoration: underline;
-				text-decoration-color: rgb(254,215,40);
-				-webkit-text-decoration-color: rgb(254,215,40);
-				-moz-text-decoration-color: rgb(254,215,40);
+				text-decoration-color: rgb(254, 215, 40);
+				-webkit-text-decoration-color: rgb(254, 215, 40);
+				-moz-text-decoration-color: rgb(254, 215, 40);
 				text-decoration-skip: none;
 				-webkit-text-decoration-skip: none;
 				-moz-text-decoration-skip: none;
 			}
 			
 			.underline:active {
-				color: rgb(254,215,40);
+				color: rgb(254, 215, 40);
 			}
-
-            .borderline{            
-                border-bottom: calc(10vw * 100 / 2732) solid rgb(254,215,40);
-                border-bottom: -webkit-calc(10vw * 100 / 2732) solid rgb(254,215,40);
-                /* border-bottom: calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
-                /* border-bottom: -webkit-calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
-                line-height: calc(65vw * 400 / 8196);
-                line-height: -webkit-calc(65vw * 400 / 8196);
-                display: inline-block;
-            }
-
+			
+			.borderline {
+				border-bottom: calc(10vw * 100 / 2732) solid rgb(254, 215, 40);
+				border-bottom: -webkit-calc(10vw * 100 / 2732) solid rgb(254, 215, 40);
+				/* border-bottom: calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
+				/* border-bottom: -webkit-calc(13.64vw * 100 / 2732) solid rgb(254,215,40); */
+				line-height: calc(65vw * 400 / 8196);
+				line-height: -webkit-calc(65vw * 400 / 8196);
+				display: inline-block;
+			}
+			
 			.display-4 {
 				font-size: calc(105vw * 400 / 8196);
 				font-size: -webkit-calc(105vw * 400 / 8196);
-                line-height: calc(105vw * 400 / 8196);
-                line-height: -webkit-calc(105vw * 400 / 8196);
+				line-height: calc(105vw * 400 / 8196);
+				line-height: -webkit-calc(105vw * 400 / 8196);
 			}
 			
 			.smallclass {
 				font-size: calc(75vw * 400 / 8196);
 				font-size: -webkit-calc(75vw * 400 / 8196);
 			}
-            .time_btn{
-                margin-left:calc(275vw * 100 / 2732);
-                margin-left:-webkit-calc(275vw * 100 / 2732);
-            }
-            .time_btn.smallclass{
-                margin-left:calc(100vw * 100 / 2732);
-                margin-left:-webkit-calc(100vw * 100 / 2732);
-            }
-            .time_btn:first-child{
-                margin-left:15px;
-            }
+			
+			.time_btn {
+				margin-left: calc(275vw * 100 / 2732);
+				margin-left: -webkit-calc(275vw * 100 / 2732);
+			}
+			
+			.time_btn.smallclass {
+				margin-left: calc(100vw * 100 / 2732);
+				margin-left: -webkit-calc(100vw * 100 / 2732);
+			}
+			
+			.time_btn:first-child {
+				margin-left: 15px;
+			}
+			
 			ul.nav.abn-tree .level-10 .indented {
 				position: relative;
 				left: 180px;
@@ -147,17 +145,21 @@
 			p {
 				margin: 0;
 			}
-            .content-wrap,.result-wrap{
-                padding-left: -webkit-calc(150vw * 100 / 2732);
-                padding-right: -webkit-calc(150vw * 100 / 2732);
-            }
-			.result-wrap{
-                user-select:none;
-                -webkit-user-select:none;
-            }
+			
+			.content-wrap,
+			.result-wrap {
+				padding-left: -webkit-calc(150vw * 100 / 2732);
+				padding-right: -webkit-calc(150vw * 100 / 2732);
+			}
+			
+			.result-wrap {
+				user-select: none;
+				-webkit-user-select: none;
+			}
+			
 			.result-title {
 				font-family: "GT-America-Expanded-Bold";
-				color: rgb(254,215,40);
+				color: rgb(254, 215, 40);
 				font-size: calc(140vw * 400 / 8196);
 				font-size: -webkit-calc(140vw * 400 / 8196);
 				line-height: calc(140vw * 400 / 8196);
@@ -170,1095 +172,1097 @@
 			.result-btn {
 				font-family: "SuisseIntl-Light";
 				font-size: calc(75vw * (400 / 8196));
-				font-size: -webkit-calc(75vw * 400 / 8196);           
+				font-size: -webkit-calc(75vw * 400 / 8196);
 			}
-            .result-info{
-                line-height: calc(90vw * 400 / 8196);
-                line-height: -webkit-calc(90vw * 400 / 8196);
-            }
+			
+			.result-info {
+				line-height: calc(90vw * 400 / 8196);
+				line-height: -webkit-calc(90vw * 400 / 8196);
+			}
+			
 			.result-btn {
 				display: inline-block;
 				margin-top: calc(140vw * 400 / 8196);
 				margin-top: -webkit-calc(140vw * 400 / 8196);
-                line-height: calc(50vw * 400 / 8196);
-                line-height: -webkit-calc(50vw * 400 / 8196);
+				line-height: calc(50vw * 400 / 8196);
+				line-height: -webkit-calc(50vw * 400 / 8196);
 			}
 		</style>
 
-  <title>时间海关</title>
-</head>
+		<title>时间海关</title>
+	</head>
 
-<body v-app="ibsapp" style='font-family: "SuisseIntl-Light";'>
+	<body v-app="ibsapp" style='font-family: "SuisseIntl-Light";'>
 
-    <div ui-view></div>
-  <script src="js/vx2.min.js" type="text/javascript"></script>
-  <script src="js/vx2-ui.router.min.js" type="text/javascript"></script>
-  <script src="js/abn_tree_directive.js" type="text/javascript"></script>
-  <script src="htmls/main.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    var Guide = JSON.parse(localStorage.getItem("local_time_customhouse3"));
-    if (!Guide) {
-      Guide = [{
-        "label": "To gain entry to 2089, please answer the following questions.",
-        "children": [{
-          "label": "Continue",
-          "children": [{
-            "label": "Select the purpose of your time journey.",
-            "children": [{
-              "label": "Temporary Stay",
-              "children": [{
-                "label": "Select the time period you are coming from.",
-                "children": [{
-                  "label": "Information Age: 1970-2020",
-                  "children": [{
-                    "label": "Select the type of time travel passport you are holding.",
-                    "children": [{
-                      "label": "Regular",
-                      "children": [{
-                        "label": "Select the purpose of your visit.",
-                        "children": [{
-                          "label": "Tourism",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Tourists from a time period contaminated by pollution and epidemics must provide further information. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.27775265634268487",
-                            "parent_uid": "0.5337905981269635",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5337905981269635",
-                          "parent_uid": "0.9065440948260652",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Business",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Business travelers from a time period contaminated by pollution must contribute 28% of all future income to our Reverse Environmental Clean-Up Fund in order to gain entry. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.9835686388939353",
-                            "parent_uid": "0.4859037044662158",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.4859037044662158",
-                          "parent_uid": "0.9065440948260652",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Study",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Students and scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.5166047913556377",
-                            "parent_uid": "0.41554938899613214",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.41554938899613214",
-                          "parent_uid": "0.9065440948260652",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.9065440948260652",
-                        "parent_uid": "0.45450623205783525",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.45450623205783525",
-                      "parent_uid": "0.5922510876099776",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Diplomatic",
-                      "children": [{
-                        "label": "Select your role as a time diplomat.",
-                        "children": [{
-                          "label": "Economic Negotiator",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "To gain entry to 2089, economic diplomats from a time period contaminated by pollution must contribute 8% of all future income of their time to our Reverse Environmental Clean-Up Fund. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.5098147704209397",
-                            "parent_uid": "0.2987500584437812",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.2987500584437812",
-                          "parent_uid": "0.5469566478314605",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Cultural Ambassador",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Before entering 2089, cultural ambassadors from a time period contaminated by pollution must take an environmental protection exam. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.01993947145689967",
-                            "parent_uid": "0.9355243600570862",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.9355243600570862",
-                          "parent_uid": "0.5469566478314605",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Advocate for Refugees",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Before assisting refugees, advocates from a time period contaminated by pollution are required to work for our Reverse Environmental Clean-Up Program for 5 years. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.6530521081265184",
-                            "parent_uid": "0.5050459407184706",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5050459407184706",
-                          "parent_uid": "0.5469566478314605",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.5469566478314605",
-                        "parent_uid": "0.8795063565601484",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.8795063565601484",
-                      "parent_uid": "0.5922510876099776",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Police",
-                      "children": [{
-                        "label": "Select your mission for this trip.",
-                        "children": [{
-                          "label": "Fugitive Investigation",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "Before entering 2089, please proceed to the Time Police station to register any weapons you are carrying (biological, nuclear, or mechanical).",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.1981788553205206",
-                            "parent_uid": "0.4554309029332604",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.4554309029332604",
-                          "parent_uid": "0.9883214847333031",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Border Management",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "In order to help us keep our time safe, you must be familiar with the 2089 Prohibited Items Guidelines. Please proceed to the Time Police station for orientation.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.5115974554874676",
-                            "parent_uid": "0.19640153107271008",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.19640153107271008",
-                          "parent_uid": "0.9883214847333031",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Crime Detection",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Before starting the investigation, detectives from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.2007778896698218",
-                            "parent_uid": "0.7008684891390371",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.7008684891390371",
-                          "parent_uid": "0.9883214847333031",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.9883214847333031",
-                        "parent_uid": "0.8486708398680949",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.8486708398680949",
-                      "parent_uid": "0.5922510876099776",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.5922510876099776",
-                    "parent_uid": "0.4942194456082021",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.4942194456082021",
-                  "parent_uid": "0.8720653858937732",
-                  "classes": [],
-                  "selected": false
-                }, {
-                  "label": "Experience Age: 2021-2070",
-                  "children": [{
-                    "label": "Select the type of time travel passport you are holding.",
-                    "children": [{
-                      "label": "Regular",
-                      "children": [{
-                        "label": "Select the purpose of your visit.",
-                        "children": [{
-                          "label": "Tourism",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Tourists from a time of economic crisis are required to disclose their financial status. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.9262486502936726",
-                            "parent_uid": "0.8827920590397123",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.8827920590397123",
-                          "parent_uid": "0.8539548592727713",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Business",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "The 2089 time border is now closed to companies and factories from the Experience Age because of the data wars instigated in your time. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.8076006925584538",
-                            "parent_uid": "0.5107651418685459",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5107651418685459",
-                          "parent_uid": "0.8539548592727713",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Study",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Instead of paying tuition, students from the time of economic crisis are required to work for Time Wanderer for 5 years after graduation. Before entering 2089, meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.8314492098821993",
-                            "parent_uid": "0.3915132471692715",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.3915132471692715",
-                          "parent_uid": "0.8539548592727713",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.8539548592727713",
-                        "parent_uid": "0.7353123879958676",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.7353123879958676",
-                      "parent_uid": "0.9640293038678107",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Diplomatic",
-                      "children": [{
-                        "label": "Select your role as a time diplomat.",
-                        "children": [{
-                          "label": "Economic Negotiator",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "We have ceased all trade contacts with negotiators from the Experience Age because of the data wars instigated in your time. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.23233362815748748",
-                            "parent_uid": "0.7021843992154368",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.7021843992154368",
-                          "parent_uid": "0.20265827149309046",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Cultural Ambassador",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "We look forward to learning about the arts and culture produced during the data wars in your time. We hope to foster mutual understanding between the Experience Age and the Wormhole Age. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.8251417174342541",
-                            "parent_uid": "0.5048687502407772",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5048687502407772",
-                          "parent_uid": "0.20265827149309046",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Advocate for Refugees",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Before proceeding to an embassy or consulate in 2089, consular officers from the time of data wars are required to review their financial status. Please meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.4812677154705669",
-                            "parent_uid": "0.6142662536654797",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.6142662536654797",
-                          "parent_uid": "0.20265827149309046",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.20265827149309046",
-                        "parent_uid": "0.168229890963018",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.168229890963018",
-                      "parent_uid": "0.9640293038678107",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Police",
-                      "children": [{
-                        "label": "Select your mission for this trip.",
-                        "children": [{
-                          "label": "Fugitive Investigation",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Investigators from a time period jeopardized by data wars must submit to extensive identity checks. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.4878928566997567",
-                            "parent_uid": "0.5403416028579062",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5403416028579062",
-                          "parent_uid": "0.11340416461289826",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Border Management",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "We currently don’t have any openings for the Time Border Manager position. You will be sent to 2170 instead, an era suffering from a labor shortage.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.24888096090056178",
-                            "parent_uid": "0.5723462571339408",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5723462571339408",
-                          "parent_uid": "0.11340416461289826",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Crime Detection",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "Because of the data wars instigated in the Experience Age, all time-based criminal cases from your time have handed over to the Exoplanets Age detectives, who are equipped with advanced anti-tracking technologies. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.7414691344638691",
-                            "parent_uid": "0.4204776019757648",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.4204776019757648",
-                          "parent_uid": "0.11340416461289826",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.11340416461289826",
-                        "parent_uid": "0.4497582415787773",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.4497582415787773",
-                      "parent_uid": "0.9640293038678107",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.9640293038678107",
-                    "parent_uid": "0.17021222952728965",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.17021222952728965",
-                  "parent_uid": "0.8720653858937732",
-                  "classes": [],
-                  "selected": false
-                }, {
-                  "label": "Exoplanets Age: 2121-2170",
-                  "children": [{
-                    "label": "Select the type of time travel passport you are holding.",
-                    "children": [{
-                      "label": "Regular",
-                      "children": [{
-                        "label": "Select the purpose of your visit.",
-                        "children": [{
-                          "label": "Tourism",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "The maximum duration of stay for tourists from the Exoplanets Age is 8 days, owing to depopulation issues in your time. If you overstay, a fine or detention period may be imposed.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.6438442629977645",
-                            "parent_uid": "0.6379986008358289",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.6379986008358289",
-                          "parent_uid": "0.14508328602978127",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Business",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "We welcome businesses from the Exoplanets Age and aim to help with the problem of depopulation in your time. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.3792845568188383",
-                            "parent_uid": "0.23319461764866034",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.23319461764866034",
-                          "parent_uid": "0.14508328602978127",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Study",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "To prevent the depopulation issue in your time from getting worse, we require students and scholars from the Exoplanets Age to return immediately after study. Meet our AI officer in the interview room.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.4184618537490741",
-                            "parent_uid": "0.492255382177222",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.492255382177222",
-                          "parent_uid": "0.14508328602978127",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.14508328602978127",
-                        "parent_uid": "0.6749630577521928",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.6749630577521928",
-                      "parent_uid": "0.35044760285401266",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Diplomatic",
-                      "children": [{
-                        "label": "Select your role as a time diplomat.",
-                        "children": [{
-                          "label": "Economic Negotiator",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "We look forward to meeting you at the Time Summit and holding you accountable for the economic crisis caused by depopulation in your time. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.8735574072283885",
-                            "parent_uid": "0.17155770251147429",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.17155770251147429",
-                          "parent_uid": "0.3274959400869999",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Cultural Ambassador",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "The Exoplanets Age was voted the “least interesting” by our people because of the monoculture enforced by the global government in your time. We have suspended cultural exchange activities with the Exoplanets Age. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.46733214705352544",
-                            "parent_uid": "0.5311452689113103",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.5311452689113103",
-                          "parent_uid": "0.3274959400869999",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Advocate for Refugees",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "We have limited the number of Exoplanet refugees allowed entry to the Wormhole Age because of the depopulation problem in your time. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.6824713143407917",
-                            "parent_uid": "0.542293128808456",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.542293128808456",
-                          "parent_uid": "0.3274959400869999",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.3274959400869999",
-                        "parent_uid": "0.15980890290862781",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.15980890290862781",
-                      "parent_uid": "0.35044760285401266",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Police",
-                      "children": [{
-                        "label": "Select your mission for this trip.",
-                        "children": [{
-                          "label": "Fugitive Investigation",
-                          "children": [{
-                            "leaf": true,
-                            "label": "UNDETERMINED",
-                            "data": "Exoplanet weapons are prohibited in the Wormhole Age. Meet our AI officer in the interview room for an additional security check. You will be equipped with psycho-electric weapons from our time.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.2195556065063795",
-                            "parent_uid": "0.6415899804353524",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.6415899804353524",
-                          "parent_uid": "0.463974578884053",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Border Management",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY DENIED",
-                            "data": "Considering the depopulation problem in the Exoplanets Age, we advise you to go back and join your own Time Border Force. Prepare for immediate return to your time of origin.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.47624289313391466",
-                            "parent_uid": "0.6900131910498157",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.6900131910498157",
-                          "parent_uid": "0.463974578884053",
-                          "classes": [],
-                          "selected": false
-                        }, {
-                          "label": "Time Crime Detection",
-                          "children": [{
-                            "leaf": true,
-                            "label": "ENTRY ADMITTED",
-                            "data": "To prevent the depopulation issue in your time from getting worse, you must shorten the time you spend in 2089 and return to your era immediately after completing your mission. We will equip you with an AI assistant detective. Please meet her at the Time Police station.",
-                            "level": 11,
-                            "expanded": false,
-                            "uid": "0.13213438959400303",
-                            "parent_uid": "0.7530063435167098",
-                            "children": [],
-                            "classes": ["leaf"],
-                            "selected": false
-                          }],
-                          "level": 10,
-                          "expanded": true,
-                          "uid": "0.7530063435167098",
-                          "parent_uid": "0.463974578884053",
-                          "classes": [],
-                          "selected": false
-                        }],
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.463974578884053",
-                        "parent_uid": "0.020699635688800067",
-                        "classes": [],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.020699635688800067",
-                      "parent_uid": "0.35044760285401266",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.35044760285401266",
-                    "parent_uid": "0.45694704472873604",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.45694704472873604",
-                  "parent_uid": "0.8720653858937732",
-                  "classes": [],
-                  "selected": false
-                }],
-                "level": 5,
-                "expanded": true,
-                "uid": "0.8720653858937732",
-                "parent_uid": "0.5636786045159028",
-                "classes": [],
-                "selected": false
-              }],
-              "level": 4,
-              "expanded": true,
-              "uid": "0.5636786045159028",
-              "parent_uid": "0.8877447113998456",
-              "classes": [],
-              "selected": false
-            }, {
-              "label": "Immigration",
-              "children": [{
-                "label": "Select the time period you are coming from.",
-                "children": [{
-                  "label": "Information Age: 1970-2020",
-                  "children": [{
-                    "label": "Select your time immigration type.",
-                    "children": [{
-                      "label": "Spouse of a 2089 Citizen",
-                      "children": [{
-                        "leaf": true,
-                        "label": "UNDETERMINED",
-                        "data": "Time immigrants from a time period contaminated by pollution and epidemics and their spouses in 2089 must submit to extensive health checks. Contact your spouse immediately to arrange the examination.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.8883863232770612",
-                        "parent_uid": "0.49954140777441025",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.49954140777441025",
-                      "parent_uid": "0.011057120999944381",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Skilled Worker",
-                      "children": [{
-                        "leaf": true,
-                        "label": "UNDETERMINED",
-                        "data": "Skilled immigrants from a time period contaminated by pollution and epidemics are required to work for our Reverse Environmental Clean-Up Program for 8 hours a week. Meet our AI officer in the interview room.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.14852781410232718",
-                        "parent_uid": "0.34921524204195586",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.34921524204195586",
-                      "parent_uid": "0.011057120999944381",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Refugee",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY DENIED",
-                        "data": "You will be randomly sent to 2131 instead, an era suffering from depopulation. Prepare for immediate transit to the Exoplanets Age. Good luck with your relocation.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.504303425068837",
-                        "parent_uid": "0.10120837695141738",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.10120837695141738",
-                      "parent_uid": "0.011057120999944381",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.011057120999944381",
-                    "parent_uid": "0.4434308546902892",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.4434308546902892",
-                  "parent_uid": "0.6634973050680311",
-                  "classes": [],
-                  "selected": false
-                }, {
-                  "label": "Experience Age: 2021-2070",
-                  "children": [{
-                    "label": "Select your time immigration type.",
-                    "children": [{
-                      "label": "Spouse of a 2089 Citizen",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY ADMITTED",
-                        "data": "Because of the data wars instigated in your time, you and your spouse’s online identities and information will be monitored during your residence in the Wormhole Age. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.05300146016406204",
-                        "parent_uid": "0.3692852332512391",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.3692852332512391",
-                      "parent_uid": "0.1645126120601088",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Skilled Worker",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY ADMITTED",
-                        "data": "Because of the data wars instigated in your time, your income and bank accounts will be strictly monitored for illegal transactions. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.09027591546309455",
-                        "parent_uid": "0.3703326051305387",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.3703326051305387",
-                      "parent_uid": "0.1645126120601088",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Refugee",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY DENIED",
-                        "data": "Due to a large number of refugees coming from the Information Age, we are sending you to the Exoplanets Age, an era suffering from depopulation. Prepare for immediate transfer to the Exoplanets Age.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.8166052343499144",
-                        "parent_uid": "0.9597485942658537",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.9597485942658537",
-                      "parent_uid": "0.1645126120601088",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.1645126120601088",
-                    "parent_uid": "0.4816737043374115",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.4816737043374115",
-                  "parent_uid": "0.6634973050680311",
-                  "classes": [],
-                  "selected": false
-                }, {
-                  "label": "Exoplanets Age: 2121-2170",
-                  "children": [{
-                    "label": "Select your time immigration type.",
-                    "children": [{
-                      "label": "Spouse of a 2089 Citizen",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY ADMITTED",
-                        "data": "Because of the depopulation issue in your time, we require you and your spouse to stay in the Exoplanets Age at least 3 months a year, or your time immigration status will be canceled. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.8736056135314805",
-                        "parent_uid": "0.6559280882552527",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.6559280882552527",
-                      "parent_uid": "0.44363485890330256",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Skilled Worker",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY ADMITTED",
-                        "data": "We welcome and appreciate the contributions of skilled immigrants from the Exoplanets Age. However, because of the depopulation problem in your time, we will not transfer immigration status to your family. Please proceed to the Baggage Claim area to retrieve your approved belongings. Any persons traveling with you will be returned immediately to their time period.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.545810598850881",
-                        "parent_uid": "0.4528961236342548",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": false
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.4528961236342548",
-                      "parent_uid": "0.44363485890330256",
-                      "classes": [],
-                      "selected": false
-                    }, {
-                      "label": "Time Refugee",
-                      "children": [{
-                        "leaf": true,
-                        "label": "ENTRY DENIED",
-                        "data": "Refugee immigration in 2089 is only open to time immigrants from the Information Age, a time period contaminated by heavy pollution. Prepare for immediate return to your time of origin.",
-                        "level": 9,
-                        "expanded": true,
-                        "uid": "0.18864582206286595",
-                        "parent_uid": "0.38216979504548054",
-                        "children": [],
-                        "classes": ["leaf"],
-                        "selected": true
-                      }],
-                      "level": 8,
-                      "expanded": true,
-                      "uid": "0.38216979504548054",
-                      "parent_uid": "0.44363485890330256",
-                      "classes": [],
-                      "selected": false
-                    }],
-                    "level": 7,
-                    "expanded": true,
-                    "uid": "0.44363485890330256",
-                    "parent_uid": "0.3035002243945941",
-                    "classes": [],
-                    "selected": false
-                  }],
-                  "level": 6,
-                  "expanded": true,
-                  "uid": "0.3035002243945941",
-                  "parent_uid": "0.6634973050680311",
-                  "classes": [],
-                  "selected": false
-                }],
-                "level": 5,
-                "expanded": true,
-                "uid": "0.6634973050680311",
-                "parent_uid": "0.2701627780908986",
-                "classes": [],
-                "selected": false
-              }],
-              "level": 4,
-              "expanded": true,
-              "uid": "0.2701627780908986",
-              "parent_uid": "0.8877447113998456",
-              "classes": [],
-              "selected": false
-            }],
-            "level": 3,
-            "expanded": true,
-            "uid": "0.8877447113998456",
-            "parent_uid": "0.6675225471146207",
-            "classes": [],
-            "selected": false
-          }],
-          "level": 2,
-          "expanded": true,
-          "uid": "0.6675225471146207",
-          "parent_uid": "0.16781418703464657",
-          "classes": [],
-          "selected": false
-        }],
-        "level": 1,
-        "expanded": true,
-        "uid": "0.16781418703464657",
-        "classes": [],
-        "selected": false
-      }];
-    }
-  </script>
-  <script>
-    /(iPhone|iPad|iPhone OS|Phone|iPod|iOS)/i.test(navigator.userAgent) && (head = document.getElementsByTagName('head'),
-      viewport = document.createElement('meta'), viewport.name = 'viewport', viewport.content =
-      'target-densitydpi=device-dpi, width=480px, user-scalable=no', head.length > 0 && head[head.length - 1].appendChild(
-        viewport));
-  </script>
-</body>
+		<div ui-view></div>
+		<script src="js/vx2.min.js" type="text/javascript"></script>
+		<script src="js/vx2-ui.router.min.js" type="text/javascript"></script>
+		<script src="js/abn_tree_directive.min.js" type="text/javascript"></script>
+		<script src="htmls/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var Guide = JSON.parse(localStorage.getItem("local_time_customhouse3"));
+			if(!Guide) {
+				Guide = [{
+					"label": "To gain entry to 2089, please answer the following questions.",
+					"children": [{
+						"label": "Continue",
+						"children": [{
+							"label": "Select the purpose of your time journey.",
+							"children": [{
+								"label": "Temporary Stay",
+								"children": [{
+									"label": "Select the time period you are coming from.",
+									"children": [{
+										"label": "Information Age: 1970-2020",
+										"children": [{
+											"label": "Select the type of time travel passport you are holding.",
+											"children": [{
+												"label": "Regular",
+												"children": [{
+													"label": "Select the purpose of your visit.",
+													"children": [{
+														"label": "Tourism",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Tourists from a time period contaminated by pollution and epidemics must provide further information. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.27775265634268487",
+															"parent_uid": "0.5337905981269635",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5337905981269635",
+														"parent_uid": "0.9065440948260652",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Business",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Business travelers from a time period contaminated by pollution must contribute 28% of all future income to our Reverse Environmental Clean-Up Fund in order to gain entry. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.9835686388939353",
+															"parent_uid": "0.4859037044662158",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.4859037044662158",
+														"parent_uid": "0.9065440948260652",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Study",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Students and scholars from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.5166047913556377",
+															"parent_uid": "0.41554938899613214",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.41554938899613214",
+														"parent_uid": "0.9065440948260652",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.9065440948260652",
+													"parent_uid": "0.45450623205783525",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.45450623205783525",
+												"parent_uid": "0.5922510876099776",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Diplomatic",
+												"children": [{
+													"label": "Select your role as a time diplomat.",
+													"children": [{
+														"label": "Economic Negotiator",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "To gain entry to 2089, economic diplomats from a time period contaminated by pollution must contribute 8% of all future income of their time to our Reverse Environmental Clean-Up Fund. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.5098147704209397",
+															"parent_uid": "0.2987500584437812",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.2987500584437812",
+														"parent_uid": "0.5469566478314605",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Cultural Ambassador",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Before entering 2089, cultural ambassadors from a time period contaminated by pollution must take an environmental protection exam. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.01993947145689967",
+															"parent_uid": "0.9355243600570862",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.9355243600570862",
+														"parent_uid": "0.5469566478314605",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Advocate for Refugees",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Before assisting refugees, advocates from a time period contaminated by pollution are required to work for our Reverse Environmental Clean-Up Program for 5 years. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.6530521081265184",
+															"parent_uid": "0.5050459407184706",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5050459407184706",
+														"parent_uid": "0.5469566478314605",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.5469566478314605",
+													"parent_uid": "0.8795063565601484",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.8795063565601484",
+												"parent_uid": "0.5922510876099776",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Police",
+												"children": [{
+													"label": "Select your mission for this trip.",
+													"children": [{
+														"label": "Fugitive Investigation",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "Before entering 2089, please proceed to the Time Police station to register any weapons you are carrying (biological, nuclear, or mechanical).",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.1981788553205206",
+															"parent_uid": "0.4554309029332604",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.4554309029332604",
+														"parent_uid": "0.9883214847333031",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Border Management",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "In order to help us keep our time safe, you must be familiar with the 2089 Prohibited Items Guidelines. Please proceed to the Time Police station for orientation.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.5115974554874676",
+															"parent_uid": "0.19640153107271008",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.19640153107271008",
+														"parent_uid": "0.9883214847333031",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Crime Detection",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Before starting the investigation, detectives from a time period contaminated by pollution and epidemics must submit to extensive health checks. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.2007778896698218",
+															"parent_uid": "0.7008684891390371",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.7008684891390371",
+														"parent_uid": "0.9883214847333031",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.9883214847333031",
+													"parent_uid": "0.8486708398680949",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.8486708398680949",
+												"parent_uid": "0.5922510876099776",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.5922510876099776",
+											"parent_uid": "0.4942194456082021",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.4942194456082021",
+										"parent_uid": "0.8720653858937732",
+										"classes": [],
+										"selected": false
+									}, {
+										"label": "Experience Age: 2021-2070",
+										"children": [{
+											"label": "Select the type of time travel passport you are holding.",
+											"children": [{
+												"label": "Regular",
+												"children": [{
+													"label": "Select the purpose of your visit.",
+													"children": [{
+														"label": "Tourism",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Tourists from a time of economic crisis are required to disclose their financial status. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.9262486502936726",
+															"parent_uid": "0.8827920590397123",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.8827920590397123",
+														"parent_uid": "0.8539548592727713",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Business",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "The 2089 time border is now closed to companies and factories from the Experience Age because of the data wars instigated in your time. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.8076006925584538",
+															"parent_uid": "0.5107651418685459",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5107651418685459",
+														"parent_uid": "0.8539548592727713",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Study",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Instead of paying tuition, students from the time of economic crisis are required to work for Time Wanderer for 5 years after graduation. Before entering 2089, meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.8314492098821993",
+															"parent_uid": "0.3915132471692715",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.3915132471692715",
+														"parent_uid": "0.8539548592727713",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.8539548592727713",
+													"parent_uid": "0.7353123879958676",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.7353123879958676",
+												"parent_uid": "0.9640293038678107",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Diplomatic",
+												"children": [{
+													"label": "Select your role as a time diplomat.",
+													"children": [{
+														"label": "Economic Negotiator",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "We have ceased all trade contacts with negotiators from the Experience Age because of the data wars instigated in your time. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.23233362815748748",
+															"parent_uid": "0.7021843992154368",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.7021843992154368",
+														"parent_uid": "0.20265827149309046",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Cultural Ambassador",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "We look forward to learning about the arts and culture produced during the data wars in your time. We hope to foster mutual understanding between the Experience Age and the Wormhole Age. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.8251417174342541",
+															"parent_uid": "0.5048687502407772",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5048687502407772",
+														"parent_uid": "0.20265827149309046",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Advocate for Refugees",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Before proceeding to an embassy or consulate in 2089, consular officers from the time of data wars are required to review their financial status. Please meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.4812677154705669",
+															"parent_uid": "0.6142662536654797",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.6142662536654797",
+														"parent_uid": "0.20265827149309046",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.20265827149309046",
+													"parent_uid": "0.168229890963018",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.168229890963018",
+												"parent_uid": "0.9640293038678107",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Police",
+												"children": [{
+													"label": "Select your mission for this trip.",
+													"children": [{
+														"label": "Fugitive Investigation",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Investigators from a time period jeopardized by data wars must submit to extensive identity checks. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.4878928566997567",
+															"parent_uid": "0.5403416028579062",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5403416028579062",
+														"parent_uid": "0.11340416461289826",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Border Management",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "We currently don’t have any openings for the Time Border Manager position. You will be sent to 2170 instead, an era suffering from a labor shortage.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.24888096090056178",
+															"parent_uid": "0.5723462571339408",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5723462571339408",
+														"parent_uid": "0.11340416461289826",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Crime Detection",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "Because of the data wars instigated in the Experience Age, all time-based criminal cases from your time have handed over to the Exoplanets Age detectives, who are equipped with advanced anti-tracking technologies. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.7414691344638691",
+															"parent_uid": "0.4204776019757648",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.4204776019757648",
+														"parent_uid": "0.11340416461289826",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.11340416461289826",
+													"parent_uid": "0.4497582415787773",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.4497582415787773",
+												"parent_uid": "0.9640293038678107",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.9640293038678107",
+											"parent_uid": "0.17021222952728965",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.17021222952728965",
+										"parent_uid": "0.8720653858937732",
+										"classes": [],
+										"selected": false
+									}, {
+										"label": "Exoplanets Age: 2121-2170",
+										"children": [{
+											"label": "Select the type of time travel passport you are holding.",
+											"children": [{
+												"label": "Regular",
+												"children": [{
+													"label": "Select the purpose of your visit.",
+													"children": [{
+														"label": "Tourism",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "The maximum duration of stay for tourists from the Exoplanets Age is 8 days, owing to depopulation issues in your time. If you overstay, a fine or detention period may be imposed.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.6438442629977645",
+															"parent_uid": "0.6379986008358289",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.6379986008358289",
+														"parent_uid": "0.14508328602978127",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Business",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "We welcome businesses from the Exoplanets Age and aim to help with the problem of depopulation in your time. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.3792845568188383",
+															"parent_uid": "0.23319461764866034",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.23319461764866034",
+														"parent_uid": "0.14508328602978127",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Study",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "To prevent the depopulation issue in your time from getting worse, we require students and scholars from the Exoplanets Age to return immediately after study. Meet our AI officer in the interview room.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.4184618537490741",
+															"parent_uid": "0.492255382177222",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.492255382177222",
+														"parent_uid": "0.14508328602978127",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.14508328602978127",
+													"parent_uid": "0.6749630577521928",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.6749630577521928",
+												"parent_uid": "0.35044760285401266",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Diplomatic",
+												"children": [{
+													"label": "Select your role as a time diplomat.",
+													"children": [{
+														"label": "Economic Negotiator",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "We look forward to meeting you at the Time Summit and holding you accountable for the economic crisis caused by depopulation in your time. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.8735574072283885",
+															"parent_uid": "0.17155770251147429",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.17155770251147429",
+														"parent_uid": "0.3274959400869999",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Cultural Ambassador",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "The Exoplanets Age was voted the “least interesting” by our people because of the monoculture enforced by the global government in your time. We have suspended cultural exchange activities with the Exoplanets Age. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.46733214705352544",
+															"parent_uid": "0.5311452689113103",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.5311452689113103",
+														"parent_uid": "0.3274959400869999",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Advocate for Refugees",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "We have limited the number of Exoplanet refugees allowed entry to the Wormhole Age because of the depopulation problem in your time. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.6824713143407917",
+															"parent_uid": "0.542293128808456",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.542293128808456",
+														"parent_uid": "0.3274959400869999",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.3274959400869999",
+													"parent_uid": "0.15980890290862781",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.15980890290862781",
+												"parent_uid": "0.35044760285401266",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Police",
+												"children": [{
+													"label": "Select your mission for this trip.",
+													"children": [{
+														"label": "Fugitive Investigation",
+														"children": [{
+															"leaf": true,
+															"label": "UNDETERMINED",
+															"data": "Exoplanet weapons are prohibited in the Wormhole Age. Meet our AI officer in the interview room for an additional security check. You will be equipped with psycho-electric weapons from our time.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.2195556065063795",
+															"parent_uid": "0.6415899804353524",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.6415899804353524",
+														"parent_uid": "0.463974578884053",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Border Management",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY DENIED",
+															"data": "Considering the depopulation problem in the Exoplanets Age, we advise you to go back and join your own Time Border Force. Prepare for immediate return to your time of origin.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.47624289313391466",
+															"parent_uid": "0.6900131910498157",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.6900131910498157",
+														"parent_uid": "0.463974578884053",
+														"classes": [],
+														"selected": false
+													}, {
+														"label": "Time Crime Detection",
+														"children": [{
+															"leaf": true,
+															"label": "ENTRY ADMITTED",
+															"data": "To prevent the depopulation issue in your time from getting worse, you must shorten the time you spend in 2089 and return to your era immediately after completing your mission. We will equip you with an AI assistant detective. Please meet her at the Time Police station.",
+															"level": 11,
+															"expanded": false,
+															"uid": "0.13213438959400303",
+															"parent_uid": "0.7530063435167098",
+															"children": [],
+															"classes": ["leaf"],
+															"selected": false
+														}],
+														"level": 10,
+														"expanded": true,
+														"uid": "0.7530063435167098",
+														"parent_uid": "0.463974578884053",
+														"classes": [],
+														"selected": false
+													}],
+													"level": 9,
+													"expanded": true,
+													"uid": "0.463974578884053",
+													"parent_uid": "0.020699635688800067",
+													"classes": [],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.020699635688800067",
+												"parent_uid": "0.35044760285401266",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.35044760285401266",
+											"parent_uid": "0.45694704472873604",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.45694704472873604",
+										"parent_uid": "0.8720653858937732",
+										"classes": [],
+										"selected": false
+									}],
+									"level": 5,
+									"expanded": true,
+									"uid": "0.8720653858937732",
+									"parent_uid": "0.5636786045159028",
+									"classes": [],
+									"selected": false
+								}],
+								"level": 4,
+								"expanded": true,
+								"uid": "0.5636786045159028",
+								"parent_uid": "0.8877447113998456",
+								"classes": [],
+								"selected": false
+							}, {
+								"label": "Immigration",
+								"children": [{
+									"label": "Select the time period you are coming from.",
+									"children": [{
+										"label": "Information Age: 1970-2020",
+										"children": [{
+											"label": "Select your time immigration type.",
+											"children": [{
+												"label": "Spouse of a 2089 Citizen",
+												"children": [{
+													"leaf": true,
+													"label": "UNDETERMINED",
+													"data": "Time immigrants from a time period contaminated by pollution and epidemics and their spouses in 2089 must submit to extensive health checks. Contact your spouse immediately to arrange the examination.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.8883863232770612",
+													"parent_uid": "0.49954140777441025",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.49954140777441025",
+												"parent_uid": "0.011057120999944381",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Skilled Worker",
+												"children": [{
+													"leaf": true,
+													"label": "UNDETERMINED",
+													"data": "Skilled immigrants from a time period contaminated by pollution and epidemics are required to work for our Reverse Environmental Clean-Up Program for 8 hours a week. Meet our AI officer in the interview room.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.14852781410232718",
+													"parent_uid": "0.34921524204195586",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.34921524204195586",
+												"parent_uid": "0.011057120999944381",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Refugee",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY DENIED",
+													"data": "You will be randomly sent to 2131 instead, an era suffering from depopulation. Prepare for immediate transit to the Exoplanets Age. Good luck with your relocation.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.504303425068837",
+													"parent_uid": "0.10120837695141738",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.10120837695141738",
+												"parent_uid": "0.011057120999944381",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.011057120999944381",
+											"parent_uid": "0.4434308546902892",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.4434308546902892",
+										"parent_uid": "0.6634973050680311",
+										"classes": [],
+										"selected": false
+									}, {
+										"label": "Experience Age: 2021-2070",
+										"children": [{
+											"label": "Select your time immigration type.",
+											"children": [{
+												"label": "Spouse of a 2089 Citizen",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY ADMITTED",
+													"data": "Because of the data wars instigated in your time, you and your spouse’s online identities and information will be monitored during your residence in the Wormhole Age. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.05300146016406204",
+													"parent_uid": "0.3692852332512391",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.3692852332512391",
+												"parent_uid": "0.1645126120601088",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Skilled Worker",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY ADMITTED",
+													"data": "Because of the data wars instigated in your time, your income and bank accounts will be strictly monitored for illegal transactions. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.09027591546309455",
+													"parent_uid": "0.3703326051305387",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.3703326051305387",
+												"parent_uid": "0.1645126120601088",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Refugee",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY DENIED",
+													"data": "Due to a large number of refugees coming from the Information Age, we are sending you to the Exoplanets Age, an era suffering from depopulation. Prepare for immediate transfer to the Exoplanets Age.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.8166052343499144",
+													"parent_uid": "0.9597485942658537",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.9597485942658537",
+												"parent_uid": "0.1645126120601088",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.1645126120601088",
+											"parent_uid": "0.4816737043374115",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.4816737043374115",
+										"parent_uid": "0.6634973050680311",
+										"classes": [],
+										"selected": false
+									}, {
+										"label": "Exoplanets Age: 2121-2170",
+										"children": [{
+											"label": "Select your time immigration type.",
+											"children": [{
+												"label": "Spouse of a 2089 Citizen",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY ADMITTED",
+													"data": "Because of the depopulation issue in your time, we require you and your spouse to stay in the Exoplanets Age at least 3 months a year, or your time immigration status will be canceled. Please proceed to the Baggage Claim area to retrieve your approved belongings.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.8736056135314805",
+													"parent_uid": "0.6559280882552527",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.6559280882552527",
+												"parent_uid": "0.44363485890330256",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Skilled Worker",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY ADMITTED",
+													"data": "We welcome and appreciate the contributions of skilled immigrants from the Exoplanets Age. However, because of the depopulation problem in your time, we will not transfer immigration status to your family. Please proceed to the Baggage Claim area to retrieve your approved belongings. Any persons traveling with you will be returned immediately to their time period.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.545810598850881",
+													"parent_uid": "0.4528961236342548",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": false
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.4528961236342548",
+												"parent_uid": "0.44363485890330256",
+												"classes": [],
+												"selected": false
+											}, {
+												"label": "Time Refugee",
+												"children": [{
+													"leaf": true,
+													"label": "ENTRY DENIED",
+													"data": "Refugee immigration in 2089 is only open to time immigrants from the Information Age, a time period contaminated by heavy pollution. Prepare for immediate return to your time of origin.",
+													"level": 9,
+													"expanded": true,
+													"uid": "0.18864582206286595",
+													"parent_uid": "0.38216979504548054",
+													"children": [],
+													"classes": ["leaf"],
+													"selected": true
+												}],
+												"level": 8,
+												"expanded": true,
+												"uid": "0.38216979504548054",
+												"parent_uid": "0.44363485890330256",
+												"classes": [],
+												"selected": false
+											}],
+											"level": 7,
+											"expanded": true,
+											"uid": "0.44363485890330256",
+											"parent_uid": "0.3035002243945941",
+											"classes": [],
+											"selected": false
+										}],
+										"level": 6,
+										"expanded": true,
+										"uid": "0.3035002243945941",
+										"parent_uid": "0.6634973050680311",
+										"classes": [],
+										"selected": false
+									}],
+									"level": 5,
+									"expanded": true,
+									"uid": "0.6634973050680311",
+									"parent_uid": "0.2701627780908986",
+									"classes": [],
+									"selected": false
+								}],
+								"level": 4,
+								"expanded": true,
+								"uid": "0.2701627780908986",
+								"parent_uid": "0.8877447113998456",
+								"classes": [],
+								"selected": false
+							}],
+							"level": 3,
+							"expanded": true,
+							"uid": "0.8877447113998456",
+							"parent_uid": "0.6675225471146207",
+							"classes": [],
+							"selected": false
+						}],
+						"level": 2,
+						"expanded": true,
+						"uid": "0.6675225471146207",
+						"parent_uid": "0.16781418703464657",
+						"classes": [],
+						"selected": false
+					}],
+					"level": 1,
+					"expanded": true,
+					"uid": "0.16781418703464657",
+					"classes": [],
+					"selected": false
+				}];
+			}
+		</script>
+		<script>
+			/(iPhone|iPad|iPhone OS|Phone|iPod|iOS)/i.test(navigator.userAgent) && (head = document.getElementsByTagName('head'),
+				viewport = document.createElement('meta'), viewport.name = 'viewport', viewport.content =
+				'target-densitydpi=device-dpi, width=480px, user-scalable=no', head.length > 0 && head[head.length - 1].appendChild(
+					viewport));
+		</script>
+	</body>
 
 </html>
