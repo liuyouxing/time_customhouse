@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" style='font-family: "SuisseIntl-Light";'>
   <div v-controller="indexCtrl" v-init="startup();">
     <div class="content-wrap" v-show="!dataJson.leaf">
       <h1 class="display-4" style="padding-top:30vh;" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
@@ -9,9 +9,10 @@
           <span v-class="{'underline':item.label!=='Continue','borderline':item.label==='Continue'}" v-bind="item.label"></span>
         </div>
       </div>
+      <font style='font-family: "GT-America-Expanded-Bold";'>&nbsp;</font>
     </div>
 
-    <div v-press class="result-wrap" v-show="dataJson.leaf">
+    <div v-press class="result-wrap" v-show="dataJson.leaf">    	
       <p class="result-title" style="padding-top:20vh;" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
       <span class="result-btn borderline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>

@@ -11,9 +11,8 @@
   <meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" id="favicon">
 
-  <link rel="stylesheet" href="css/bootstrap4.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" type="text/css" href="js/abn_tree.css" />
+  <link rel="stylesheet" href="css/bootstrap4.min.css">
+
   <style>
     html,
 			body {
@@ -169,7 +168,7 @@
 			
 			.result-info,
 			.result-btn {
-				font-family: "SuisseIntl-SuisseIntl";
+				font-family: "SuisseIntl-Light";
 				font-size: calc(75vw * (400 / 8196));
 				font-size: -webkit-calc(75vw * 400 / 8196);           
 			}
@@ -191,14 +190,13 @@
 
 <body v-app="ibsapp">
 
-  <div style='font-family: "SuisseIntl-SuisseIntl";'>
+  <div>
     <div ui-view></div>
   </div>
   <script src="js/vx2.min.js" type="text/javascript"></script>
   <script src="js/vx2-ui.router.min.js" type="text/javascript"></script>
   <script src="js/abn_tree_directive.js" type="text/javascript"></script>
   <script src="htmls/main.js" type="text/javascript"></script>
-  <script src="htmls/setting.js" type="text/javascript"></script>
   <script type="text/javascript">
     var Guide = JSON.parse(localStorage.getItem("local_time_customhouse3"));
     if (!Guide) {
@@ -1256,14 +1254,12 @@
         "selected": false
       }];
     }
-
   </script>
   <script>
     /(iPhone|iPad|iPhone OS|Phone|iPod|iOS)/i.test(navigator.userAgent) && (head = document.getElementsByTagName('head'),
       viewport = document.createElement('meta'), viewport.name = 'viewport', viewport.content =
       'target-densitydpi=device-dpi, width=480px, user-scalable=no', head.length > 0 && head[head.length - 1].appendChild(
         viewport));
-
   </script>
 </body>
 
