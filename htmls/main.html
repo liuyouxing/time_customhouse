@@ -6,7 +6,7 @@
       <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
         <div v-class="dataJson.smallClass?'time_btn smallclass':'time_btn display-4'" v-repeat="item in dataJson.children"
           v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
-          <span v-class="item.label?item.label=='Continue'?'borderline':'underline'" v-bind="item.label"></span>
+          <span v-class="!item.label?'':item.label=='Continue'?'borderline':'underline'" v-bind="item.label"></span>
         </div>
       </div>
       <font style='font-family: "GT-America-Expanded-Bold";'>&nbsp;</font>
