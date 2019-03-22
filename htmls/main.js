@@ -86,43 +86,31 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
         $scope.isMobile = false;
       }
     }
-    $scope.doIt = function (item, flag) {
+    $scope.doIt = function (ev,item) {
       if ($scope.isMobile) {
-        if (flag) {
+        if (ev.type=="mouseup") {
           return;
         }
       } else {
-        if (!flag) {
+        if (ev.type!="mouseup") {
           return;
         }
       }
 
       if (item.children && item.children.length == 1) {
         $scope.dataJson = $scope.addSmallClass(item.children[0]);
+
       } else {
         alert("抱歉，没有找到合适的结果！请检查数据设置。");
       }
-      //			else {
-      //				for(var i = 0; i < item.data.length; i++) {
-      //					var resultObj = item.data[i];
-      //					for(var j = 0; j < Answers.length; j++) {
-      //						if(Answers[j] == resultObj.require) {
-      //							$scope.dataJson = resultObj;
-      //							return;
-      //						}
-      //					}
-      //
-      //				}
-      //			}
-
     };
-    $scope.exit = function (flag) {
+    $scope.exit = function (ev) {
       if ($scope.isMobile) {
-        if (flag) {
+        if (ev.type=="mouseup") {
           return;
         }
       } else {
-        if (!flag) {
+        if (ev.type!="mouseup") {
           return;
         }
       }
@@ -170,7 +158,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 			}
 		}
 	};
-	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse3")) || Guide;
+	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse4")) || Guide;
 	//console.log(JSON.stringify($scope.my_data));
 	$scope.my_tree = tree = {};
 	$scope.doChange=function(){
@@ -229,11 +217,11 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 	};
 	//生成JSON
 	$scope.create_a_json = function() {
-		localStorage.setItem("local_time_customhouse3", JSON.stringify($scope.my_data))
+		localStorage.setItem("local_time_customhouse4", JSON.stringify($scope.my_data))
 		alert("本机存储成功！您可以通过访问链接，查看效果。")
 	};
 	$scope.delete_json = function() {
-		localStorage.removeItem("local_time_customhouse3");
+		localStorage.removeItem("local_time_customhouse4");
 		alert('还原成功！');
 	};
 	$scope.copy_json = function() {

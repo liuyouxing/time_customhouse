@@ -7,17 +7,17 @@
         <div v-class="dataJson.smallClass?(item.label.indexOf('Age')>-1?'time_btn smallclass
           small-space':(item.label.indexOf('Skilled Worker')>-1||item.label.indexOf('Time Refugee')>-1?'time_btn smallclass
           normal-space':'time_btn smallclass')):'time_btn
-          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt(item,false)" v-mouseup="doIt(item,true)">
+          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt($event,item)" v-mouseup="doIt($event,item)">
           <span class="underline" v-show="item.label" v-bind-html="trustAsHtml(item.label)"></span>
         </div>
       </div>
-      <font style='font-family: "GT-America-Expanded-Bold";'>&nbsp;</font>
+      <font style='font-family: "GT-America-Expanded-Bold";'> </font>
     </div>
 
     <div v-press class="result-wrap" v-show="dataJson.leaf">
       <p class="result-title" style="padding-top:-webkit-calc(30vh - 2500vw / 2732);" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
-      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
+      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit($event);" v-mouseup="exit($event);"></span>
     </div>
   </div>
 
