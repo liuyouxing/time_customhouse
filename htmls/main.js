@@ -49,7 +49,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
     });
   }])
   .run(['$rootScope', function ($rootScope) {
-    $rootScope.timeoutNum=10;
+    $rootScope.timeoutNum=20;//结果页自动退出，延时时间20s
     $rootScope.fullName = "全屏";
     $rootScope.toggleFullScreen = function () {
       if ($rootScope.fullName == '全屏') {
