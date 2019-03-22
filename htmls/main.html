@@ -7,7 +7,7 @@
         <div v-class="dataJson.smallClass?(item.label.indexOf('Age')>-1?'time_btn smallclass
           small-space':(item.label.indexOf('Skilled Worker')>-1||item.label.indexOf('Time Refugee')>-1?'time_btn smallclass
           normal-space':'time_btn smallclass')):'time_btn
-          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt($event,item)" v-mouseup="doIt($event,item)">
+          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt('touchend',item)" v-mouseup="doIt('mouseup',item)">
           <span class="underline" v-show="item.label" v-bind-html="trustAsHtml(item.label)"></span>
         </div>
       </div>
@@ -17,7 +17,7 @@
     <div v-press class="result-wrap" v-show="dataJson.leaf">
       <p class="result-title" style="padding-top:30vh;" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
-      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit($event);" v-mouseup="exit($event);"></span>
+      <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit('touchend');" v-mouseup="exit('mouseup');"></span>
     </div>
   </div>
 
