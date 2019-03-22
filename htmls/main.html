@@ -15,7 +15,7 @@
     </div>
 
     <div v-press class="result-wrap" v-show="dataJson.leaf">
-      <p class="result-title" style="padding-top:30vh;" v-bind="dataJson.label"></p>
+      <p class="result-title" style="padding-top:-webkit-calc(30vh - 2500vw / 2732);" v-bind="dataJson.label"></p>
       <p class="result-info" v-bind-html="trustAsHtml(dataJson.data)"></p>
       <span class="result-btn underline" v-bind="'Exit'" v-touchend="exit(false);" v-mouseup="exit(true);"></span>
     </div>
