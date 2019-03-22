@@ -74,9 +74,9 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
       }
     };
   }])
-  .controller("indexCtrl", ['$scope', '$sce', function ($scope, $sce) {
+  .controller("indexCtrl", ['$scope', '$sce','$timeout', function ($scope, $sce,$timeout) {
     $scope.startup = function () {
-      $scope.dataJson = [].concat(Guide)[0];
+      $scope.dataJson = Guide[0];
       var u = navigator.userAgent;
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
       var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
@@ -100,8 +100,8 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
       if (item.children && item.children.length == 1) {
         $scope.dataJson = $scope.addSmallClass(item.children[0]);
         if($scope.dataJson.leaf){//延迟10s退出
-          timeoutExit = setTimeout(function () {
-            $scope.dataJson = [].concat(Guide)[0];
+          $scope.timeoutExit = $timeout(function () {
+            $scope.dataJson = Guide[0];
           }, 10000);
         }
       } else {
@@ -118,7 +118,9 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
           return;
         }
       }
-      timeoutExit&&clearTimeout(timeoutExit);
+      if($scope.timeoutExit){
+        $timeout.cancel($scope.timeoutExit);
+      }
       $scope.dataJson = $scope.addSmallClass(Guide[0]);
     };
     $scope.trustAsHtml = function (htm) {
