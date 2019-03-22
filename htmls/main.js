@@ -49,6 +49,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
     });
   }])
   .run(['$rootScope', function ($rootScope) {
+    $rootScope.timeoutNum=10;
     $rootScope.fullName = "全屏";
     $rootScope.toggleFullScreen = function () {
       if ($rootScope.fullName == '全屏') {
@@ -102,7 +103,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
         if($scope.dataJson.leaf){//延迟10s退出
           $scope.timeoutExit = $timeout(function () {
             $scope.dataJson = Guide[0];
-          }, 10000);
+          }, $scope.$root.timeoutNum*1000);
         }
       } else {
         alert("抱歉，没有找到合适的结果！请检查数据设置。");
