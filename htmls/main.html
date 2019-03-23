@@ -11,7 +11,7 @@
           <span class="underline" v-show="item.label" v-bind-html="trustAsHtml(item.label)"></span>
         </div>
       </div>
-      <font style='font-family: "GT-America-Expanded-Bold";'> </font>
+      <font v-if="dataJson.children[0].label=='Continue'" style='font-family: "GT-America-Expanded-Bold";'> </font>
     </div>
 
     <div v-press class="result-wrap" v-show="dataJson.leaf">
