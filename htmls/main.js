@@ -50,6 +50,16 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
   }])
   .run(['$rootScope', function ($rootScope) {
     $rootScope.timeoutNum=20;//结果页自动退出，延时时间20s
+
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid || isiOS) {
+      $rootScope.isMobile = true;
+    } else {
+      $rootScope.isMobile = false;
+    }
+
     $rootScope.fullName = "全屏";
     $rootScope.toggleFullScreen = function () {
       if ($rootScope.fullName == '全屏') {
@@ -74,18 +84,11 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
         $rootScope.fullName = '全屏';
       }
     };
+    
   }])
   .controller("indexCtrl", ['$scope', '$sce','$timeout', function ($scope, $sce,$timeout) {
     $scope.startup = function () {
-      $scope.dataJson = Guide[0];
-      var u = navigator.userAgent;
-      var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-      if (isAndroid || isiOS) {
-        $scope.isMobile = true;
-      } else {
-        $scope.isMobile = false;
-      }
+      $scope.dataJson = Guide[0];      
     }
     $scope.doIt = function (ev,item) {
       if ($scope.isMobile) {
