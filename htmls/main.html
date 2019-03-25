@@ -3,11 +3,11 @@
     <div class="content-wrap" v-show="!dataJson.leaf">
       <h1 class="display-4" style="padding-top:30vh;" v-bind="dataJson.label" v-dblclick="toggleFullScreen();"></h1>
 
-      <div class="row" style="padding-top: -webkit-calc(300vw * 100 / 2732)">
+      <div class="row btn-box">
         <div v-class="dataJson.smallClass?(item.label.indexOf('Age')>-1?'time_btn smallclass
           small-space':(item.label.indexOf('Skilled Worker')>-1||item.label.indexOf('Time Refugee')>-1?'time_btn smallclass
           normal-space':'time_btn smallclass')):'time_btn
-          display-4'" v-repeat="item in dataJson.children" v-touchend="doIt('touchend',item)" v-mouseup="doIt('mouseup',item)">
+          display-4-1'" v-repeat="item in dataJson.children" v-touchend="doIt('touchend',item)" v-mouseup="doIt('mouseup',item)">
           <span class="underline" v-show="item.label" v-bind-html="trustAsHtml(item.label)"></span>
         </div>
       </div>

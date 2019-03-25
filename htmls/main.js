@@ -56,8 +56,10 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     if (isAndroid || isiOS) {
       $rootScope.isMobile = true;
+      document.body.className="";
     } else {
       $rootScope.isMobile = false;
+      document.body.className = "pc-theme";
     }
 
     $rootScope.fullName = "全屏";
