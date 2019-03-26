@@ -171,7 +171,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 			}
 		}
 	};
-	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse4")) || Guide;
+	$scope.my_data = JSON.parse(localStorage.getItem("local_time_customhouse5")) || Guide;
 	//console.log(JSON.stringify($scope.my_data));
 	$scope.my_tree = tree = {};
 	$scope.doChange=function(){
@@ -230,11 +230,11 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 	};
 	//生成JSON
 	$scope.create_a_json = function() {
-		localStorage.setItem("local_time_customhouse4", JSON.stringify($scope.my_data))
+		localStorage.setItem("local_time_customhouse5", JSON.stringify($scope.my_data))
 		alert("本机存储成功！您可以通过访问链接，查看效果。")
 	};
 	$scope.delete_json = function() {
-		localStorage.removeItem("local_time_customhouse4");
+		localStorage.removeItem("local_time_customhouse5");
 		alert('还原成功！');
 	};
 	$scope.copy_json = function() {
