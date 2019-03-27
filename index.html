@@ -45,13 +45,18 @@
     }
 
     .underline {
-      text-decoration: underline;
+      underline: underline;
       text-decoration-color: rgb(254, 215, 40);
       -webkit-text-decoration-color: rgb(254, 215, 40);
       -moz-text-decoration-color: rgb(254, 215, 40);
       text-decoration-skip: none;
       -webkit-text-decoration-skip: none;
       -moz-text-decoration-skip: none;
+    }
+
+    .pc-theme span.underline{
+      text-decoration-line: underline ;
+      text-underline-position: under ;
     }
 
     .underline:active {
@@ -77,6 +82,9 @@
         min-height: auto;
         cursor: pointer;
     }
+    .pc-theme .display-4-1:hover {
+      color: rgb(254, 215, 40);
+    }
     .pc-theme h1.display-4{
       padding-top: 20vh !important;
       min-height: -webkit-calc(800vw * 100 / 2732);
@@ -94,6 +102,9 @@
     .pc-theme .smallclass {
        min-height: auto;
        cursor: pointer;
+    }
+    .pc-theme .smallclass:hover {
+      color: rgb(254, 215, 40);
     }
 
     .btn-box{
@@ -217,11 +228,14 @@
       min-height: -webkit-calc(1388vw * 100 / 2732);
     }
     .pc-theme .result-info{
-        min-height: -webkit-calc(950vw * 100 / 2732);
+        min-height: -webkit-calc(1000vw * 100 / 2732);
     }
     .pc-theme .result-btn{
       position: relative;
       cursor: pointer;
+    }
+    .pc-theme .result-btn:hover {
+      color: rgb(254, 215, 40);
     }
     .result-btn {
       display: inline-block;
