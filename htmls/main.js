@@ -15,11 +15,16 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
   }).directive("ngPress", function () {
     return {
       controller: ["$scope", "$element", "$state","$timeout", function ($scope, $element, $state,$timeout) {
-
+        
         $element.bind("touchstart", onTouchStart);
         $element.bind("touchend", onTouchEnd);
         var timeoutToset;
-
+        $scope.$on("$destroy", function() {
+          if (timeoutToset) {
+              $timeout.cancel(timeoutToset);
+          }
+        });
+        
         function onTouchStart(event) {
           timeoutToset = $timeout(function () {
             $state.go("/set");
