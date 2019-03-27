@@ -24,7 +24,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
               $timeout.cancel(timeoutToset);
           }
         });
-        
+
         function onTouchStart(event) {
           timeoutToset = $timeout(function () {
             $state.go("/set");
@@ -97,6 +97,11 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
     $scope.startup = function () {
       $scope.dataJson = Guide[0];      
     }
+    $scope.$on("$destroy", function() {
+      if ($scope.timeoutExit) {
+          $timeout.cancel($scope.timeoutExit);
+      }
+    });
     $scope.doIt = function (ev,item) {
       if ($scope.isMobile) {
         if (ev=="mouseup") {
@@ -110,11 +115,14 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
 
       if (item.children && item.children.length == 1) {
         $scope.dataJson = $scope.addSmallClass(item.children[0]);
+        // if($scope.timeoutExit){//延迟20s退出
+        //   $timeout.cancel($scope.timeoutExit);
+        // }
         if($scope.dataJson.leaf){//延迟10s退出
           $scope.timeoutExit = $timeout(function () {
             $scope.dataJson = Guide[0];
           }, $scope.$root.timeoutNum*1000);
-        }
+        }        
       } else {
         alert("抱歉，没有找到合适的结果！请检查数据设置。");
       }
@@ -129,7 +137,7 @@ vx.module('ibsapp', ['ui.router', 'angularBootstrapNavTree'])
           return;
         }
       }
-      if($scope.timeoutExit){
+      if($scope.timeoutExit){//延迟20s退出
         $timeout.cancel($scope.timeoutExit);
       }
       $scope.dataJson = $scope.addSmallClass(Guide[0]);
