@@ -49,13 +49,17 @@
       text-decoration-color: rgb(254, 215, 40);
       -webkit-text-decoration-color: rgb(254, 215, 40);
       -moz-text-decoration-color: rgb(254, 215, 40);
+      --ms-text-decoration-color: rgb(254, 215, 40);
       text-decoration-skip: none;
       -webkit-text-decoration-skip: none;
       -moz-text-decoration-skip: none;
+      -ms-text-decoration-skip: none;
     }
     
     .pc-theme span.underline{
+      text-decoration-line: none ;
       -webkit-text-decoration-line: none ;
+      text-underline-position: none ;
       -webkit-text-underline-position: none ;
     } 
 
@@ -74,7 +78,9 @@
     .display-4,.display-4-1 {
       font-size: calc(105vw * 400 / 8196);
       font-size: -webkit-calc(105vw * 400 / 8196);
+      min-height: calc(950vw * 100 / 2732);
       min-height: -webkit-calc(950vw * 100 / 2732);
+      padding-top: calc(45vw * 100 / 2732);
       padding-top: -webkit-calc(45vw * 100 / 2732);
     }
 
@@ -87,15 +93,18 @@
     }
     .pc-theme h1.display-4{
       padding-top: 20vh !important;
+      min-height: calc(800vw * 100 / 2732);
       min-height: -webkit-calc(800vw * 100 / 2732);
     }
     .pc-theme p.result-title{
+      padding-top: calc(15vh - 2500vw / 2732) !important;
       padding-top: -webkit-calc(15vh - 2500vw / 2732) !important;
     }
 
     .smallclass {
       font-size: calc(75vw * 400 / 8196);
       font-size: -webkit-calc(75vw * 400 / 8196);
+      min-height: calc(950vw * 100 / 2732);
       min-height: -webkit-calc(950vw * 100 / 2732);
     }
 
@@ -108,12 +117,14 @@
     }
 
     .btn-box{
-        padding-top: -webkit-calc(300vw * 100 / 2732);
+      padding-top: calc(300vw * 100 / 2732);
+      padding-top: -webkit-calc(300vw * 100 / 2732);
     }
 
     .pc-theme .btn-box{
       /* padding-top: -webkit-calc(200vw * 100 / 2732); */
-        padding-top: initial;
+        /* padding-top: initial; */
+        padding-top:0;
     }
 
     .time_btn {
@@ -195,7 +206,9 @@
 
     .content-wrap,
     .result-wrap {
+      padding-left: calc(150vw * 100 / 2732);
       padding-left: -webkit-calc(150vw * 100 / 2732);
+      padding-right: calc(150vw * 100 / 2732);
       padding-right: -webkit-calc(150vw * 100 / 2732);
     }
 
@@ -225,9 +238,11 @@
     .result-info {
       line-height: calc(90vw * 400 / 8196);
       line-height: -webkit-calc(90vw * 400 / 8196);
+      min-height: calc(1388vw * 100 / 2732);
       min-height: -webkit-calc(1388vw * 100 / 2732);
     }
     .pc-theme .result-info{
+        min-height: calc(1000vw * 100 / 2732);
         min-height: -webkit-calc(1000vw * 100 / 2732);
     }
     .pc-theme .result-btn{
